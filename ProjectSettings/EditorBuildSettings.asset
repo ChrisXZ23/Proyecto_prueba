@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/intefez/Menu principal.unity
+    guid: 8ace1f2155c23254387484649cd36d03
+  - enabled: 1
+    path: Assets/casaprota/casaprota.unity
+    guid: 31b6cfe2ad79d3345a9ccf0c0d9b4a28
   m_configObjects: {}
