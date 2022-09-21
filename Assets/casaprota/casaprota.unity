@@ -2843,7 +2843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 290bc9ca9c18d1d42b352a0c20194733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MensajesUI: {fileID: 0}
+  MensajesUI: {fileID: 1497084150}
   Saco: {fileID: 1923614650}
 --- !u!4 &1761424425
 Transform:

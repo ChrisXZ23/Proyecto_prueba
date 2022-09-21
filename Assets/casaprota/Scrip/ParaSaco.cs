@@ -23,6 +23,7 @@ public class ParaSaco : mensajes
         if (Input.GetKeyDown(KeyCode.F))
         {
             Destroy(Saco);
+            MensajesUI.text = "Tienes el saco, sal de la casa";
         }
     }
 }

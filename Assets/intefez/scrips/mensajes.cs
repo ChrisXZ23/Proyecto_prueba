@@ -8,7 +8,7 @@ public class mensajes : MonoBehaviour
     public Text MensajesUI;
     void Start()
     {
-        MensajesUI.text = "";
+        MensajesUI.text = "Agarra el saco";
     }
 
     // Update is called once per frame
