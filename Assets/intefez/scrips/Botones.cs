@@ -14,14 +14,13 @@ public class Botones : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
-    public void MenuPausa()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
             PanelPausa.SetActive(true);
             Time.timeScale = 0;
         }
-      
     }
 
     public void DesactivarPausa()
@@ -30,4 +29,8 @@ public class Botones : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Regreso()
+    {
+        SceneManager.LoadScene(0);
+    }
 }

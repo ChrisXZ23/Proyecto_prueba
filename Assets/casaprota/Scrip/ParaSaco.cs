@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ParaSaco : MonoBehaviour
+public class ParaSaco : mensajes
 {
     public GameObject Saco;
 
@@ -23,8 +23,6 @@ public class ParaSaco : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F))
         {
             Destroy(Saco);
-            Debug.Log("Haz obtenido el saco");
-            Debug.Log("Sal de la casa");
         }
     }
 }
