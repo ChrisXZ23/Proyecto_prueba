@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/casaprota/casaprota.unity
     guid: 31b6cfe2ad79d3345a9ccf0c0d9b4a28
+  - enabled: 1
+    path: Assets/aldea.unity
+    guid: 27b3a979083a311498df0c2e7a123a5e
+  - enabled: 1
+    path: Assets/Escenario bosque/Bosque gustavo.unity
+    guid: 5ff62f1ab4dee3a4b9a5046eb9fb39ad
   m_configObjects: {}
