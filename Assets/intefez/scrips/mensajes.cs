@@ -8,7 +8,8 @@ public class mensajes : MonoBehaviour
     public Text MensajesUI;
     void Start()
     {
-        MensajesUI.text = "";
+        MensajesUI.text = "Agarra el saco, con el boton F";
+        Invoke("ResetearTexto", 4f);
     }
 
     // Update is called once per frame
@@ -20,11 +21,6 @@ public class mensajes : MonoBehaviour
     public virtual void ResetearTexto()
     {
         MensajesUI.text = "";
-    }
-
-    public virtual void Inicio()
-    {
-        MensajesUI.text = "Agarra el saco";
     }
 
 }

@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Escenario bosque/Bosque gustavo.unity
     guid: 5ff62f1ab4dee3a4b9a5046eb9fb39ad
+  - enabled: 1
+    path: Assets/casaalcalde/casaalcalde.unity
+    guid: 04f3bcbe55b428c48867ba28e39ba106
+  - enabled: 1
+    path: Assets/intefez/Almanaque.unity
+    guid: 9f20b73e7d5d93f48b04a609e17f9356
   m_configObjects: {}

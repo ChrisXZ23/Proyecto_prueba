@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ParaSaco : mensajes
 {
@@ -22,6 +23,8 @@ public class ParaSaco : mensajes
         {
             MensajesUI.text = "Has salido de la casa";
             Invoke("ResetearTexto", 2f);
+            SceneManager.LoadScene(2);
         }
     }
+
 }

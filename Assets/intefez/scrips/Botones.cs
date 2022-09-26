@@ -33,4 +33,12 @@ public class Botones : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void AbrirAlmanaque()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            SceneManager.LoadScene(5);
+        }
+    }
 }
