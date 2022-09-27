@@ -317,54 +317,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.0654397, y: 0.94096786, z: 1.5720199}
   m_Center: {x: 0.32964504, y: 1.8335887, z: 0.17232685}
---- !u!1 &216773019 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 965983670800909620, guid: cc6441b781dcef24786c75b969f1da6e, type: 3}
-  m_PrefabInstance: {fileID: 1658334575}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &216773020
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216773019}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3, y: 3, z: 7}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &216773021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216773019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eaed4379b1bc59478f34ff3a80b3008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ColliderEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  TriggerEnter:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1601386578}
-        m_TargetAssemblyTypeName: Botones, Assembly-CSharp
-        m_MethodName: AbrirAlmanaque
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &258773423
 GameObject:
   m_ObjectHideFlags: 0
@@ -2812,6 +2764,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1295999434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8747589148034164701, guid: cc6441b781dcef24786c75b969f1da6e, type: 3}
+  m_PrefabInstance: {fileID: 1658334575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1295999437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295999434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eaed4379b1bc59478f34ff3a80b3008, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ColliderEnter:
+    m_PersistentCalls:
+      m_Calls: []
+  TriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1601386578}
+        m_TargetAssemblyTypeName: Botones, Assembly-CSharp
+        m_MethodName: AbrirAlmanaque
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!65 &1295999438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295999434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2000, y: 562.8279, z: 1000}
+  m_Center: {x: 1.5390606, y: 1.6017185, z: 329.5897}
 --- !u!1 &1297807518 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d78700143d7748340b8e676036db541c, type: 3}
