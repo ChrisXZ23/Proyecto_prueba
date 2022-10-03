@@ -1965,9 +1965,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b2987953b26284292b1803533b5ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Variablemensaje: {fileID: 0}
   MensajesUI: {fileID: 1448760184}
   Pagina1: {fileID: 1127193913}
   Fabricar: {fileID: 303450206}
+  Aviso: {fileID: 1448760181}
 --- !u!4 &1628314092
 Transform:
   m_ObjectHideFlags: 0

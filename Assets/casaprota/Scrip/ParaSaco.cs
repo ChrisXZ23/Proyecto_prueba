@@ -12,6 +12,7 @@ public class ParaSaco : mensajes
         if (Input.GetKeyDown(KeyCode.F))
         {
             Destroy(Saco);
+            Variablemensaje.SetActive(true);
             MensajesUI.text = "Tienes el saco, sal de la casa";
             Invoke("ResetearTexto", 2f);
         }

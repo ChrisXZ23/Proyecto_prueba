@@ -5,22 +5,20 @@ using UnityEngine.UI;
 
 public class mensajes : MonoBehaviour
 {
+    public GameObject Variablemensaje;
     public Text MensajesUI;
-    void Start()
+
+    public virtual void AgarrarSaco()
     {
         MensajesUI.text = "Agarra el saco, con el boton F";
         Invoke("ResetearTexto", 4f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variablemensaje.SetActive(false);
     }
 
     public virtual void ResetearTexto()
     {
         MensajesUI.text = "";
+        Variablemensaje.SetActive(false);
     }
 
 }

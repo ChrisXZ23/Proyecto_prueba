@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Almanaque : mensajes
 {
-
     public GameObject Pagina1;
     public GameObject Fabricar;
+    public GameObject Aviso;
 
    public void Pagina()
     {
@@ -15,7 +15,8 @@ public class Almanaque : mensajes
 
     public void FabricarMedi()
     {
+        
         MensajesUI.text = "Medicina fabricada";
-        Invoke("ResetearTexto", 1f);
+        Invoke("ResetearTexto", 2f);
     }
 }
