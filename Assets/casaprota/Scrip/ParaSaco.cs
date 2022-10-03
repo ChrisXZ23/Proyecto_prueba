@@ -21,7 +21,7 @@ public class ParaSaco : mensajes
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            MensajesUI.text = "Has salido de la casa";
+            SceneManager.LoadScene(2);
             Invoke("ResetearTexto", 2f);
             SceneManager.LoadScene(2);
         }

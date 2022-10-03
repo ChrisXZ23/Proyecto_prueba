@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/intefez/Almanaque.unity
     guid: 9f20b73e7d5d93f48b04a609e17f9356
+  - enabled: 1
+    path: Assets/intefez/Mapas.unity
+    guid: 71f21a8021015394d9dd53337d64b12c
   m_configObjects: {}
