@@ -8,6 +8,7 @@ public class Botones : MonoBehaviour
 {
     public GameObject BotonInicio;
     public GameObject PanelPausa;
+    public GameObject Opciones;
 
     public void BotonPlay()
     {
@@ -40,5 +41,17 @@ public class Botones : MonoBehaviour
         {
             SceneManager.LoadScene(5);
         }
+    }
+
+    public void OpcionesdelJuego()
+    {
+        Opciones.SetActive(true);
+        Time.timeScale = 0;
+    }
+
+    public void RegresarPausa()
+    {
+        Opciones.SetActive(false);
+        Time.timeScale = 0;
     }
 }
