@@ -22,7 +22,7 @@ public class Gallinas : MonoBehaviour
 
         float dist = Vector3.Distance(transform.position, transformJugador.position);
 
-        if (dist < 15)
+        if (dist < 20)
         {
 
             GallinasNavMesh.destination = jugador.transform.position;

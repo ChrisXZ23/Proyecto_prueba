@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Activar_Gallina : MonoBehaviour
 {
+    public GameObject puertaA;
+    public GameObject misionI;
+    public GameObject misionT;
+    public GameObject mensajeF;
+    public GameObject Indicador7;
+    public int numeroG;
+
     public GameObject gallinas;
     public GameObject gallinas2;
     public GameObject gallinas3;
@@ -216,6 +223,16 @@ public class Activar_Gallina : MonoBehaviour
         Corral6.SetActive(true);
     }
 
+    void numeroGallinas()
+    {
+        numeroG++;
+        if (numeroG == 6)
+        {
+            misionT.SetActive(true);
+            Debug.Log("Sal del gallinero");
+        }
+    }
+
 
     void dejarGallinas()
     {
@@ -294,31 +311,37 @@ public class Activar_Gallina : MonoBehaviour
     void gallinaDejada()
     {
         gallinaQuieta.SetActive(true);
+        numeroGallinas();
     }
 
     void gallinaDejada2()
     {
         gallinaQuieta2.SetActive(true);
+        numeroGallinas();
     }
 
     void gallinaDejada3()
     {
         gallinaQuieta3.SetActive(true);
+        numeroGallinas();
     }
 
     void gallinaDejada4()
     {
         gallinaQuieta4.SetActive(true);
+        numeroGallinas();
     }
 
     void gallinaDejada5()
     {
         gallinaQuieta5.SetActive(true);
+        numeroGallinas();
     }
 
     void gallinaDejada6()
     {
         gallinaQuieta6.SetActive(true);
+        numeroGallinas();
     }
 
     void Particula1()
@@ -462,6 +485,71 @@ public class Activar_Gallina : MonoBehaviour
         }
 
 
+    }
+
+    void inicioMision()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            activarGallinas();
+            mensajeInicioM();
+            abrirPuerta();
+            Destroy(misionI);
+        }
+    }
+
+    void mensajeInicioM()
+    {
+        Debug.Log("Atrapa todas las gallinas");
+    }
+
+    public void mensajeMision()
+    {
+        Debug.Log("Iniciar misión");
+        inicioMision();
+
+    }
+
+
+
+    void abrirPuerta()
+    {
+        var anim = puertaA.GetComponent<Animator>();
+        anim.SetBool("PuertaA", true);
+    }
+
+
+
+    public void misionTerminadaG()
+    {
+        cerrarPuerta();
+        Destroy(misionT);
+        Debug.Log("Mision completada, dirigete con el aldeano");
+        mensajeF.SetActive(true);
+        Indicador7.SetActive(true);
+    }
+
+    void cerrarPuerta()
+    {
+        var animc = puertaA.GetComponent<Animator>();
+        animc.SetBool("PuertaC", true);
+    }
+
+
+    public void mensajeFinal()
+    {
+        mensajeMisionG();
+        Debug.Log("Preciona F para hablar");
+    }
+
+    void mensajeMisionG()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Muchas por tu ayuda");
+            Destroy(mensajeF);
+            Destroy(Indicador7);
+        }
     }
 
 }
