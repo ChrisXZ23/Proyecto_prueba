@@ -19,4 +19,10 @@ public class Almanaque : mensajes
         MensajesUI.text = "Medicina fabricada";
         Invoke("ResetearTexto", 2f);
     }
+
+    public void NoSirve()
+    {
+        MensajesUI.text = "No disponible";
+        Invoke("ResetearTexto", 2f);
+    }
 }

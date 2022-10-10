@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 158241386}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1628314091}
+        m_TargetAssemblyTypeName: Almanaque, Assembly-CSharp
+        m_MethodName: NoSirve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &158241386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +336,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 243475008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1628314091}
+        m_TargetAssemblyTypeName: Almanaque, Assembly-CSharp
+        m_MethodName: NoSirve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &243475008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1086,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1033098156}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1628314091}
+        m_TargetAssemblyTypeName: Almanaque, Assembly-CSharp
+        m_MethodName: NoSirve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1033098156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1739,7 +1775,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1434145027}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1628314091}
+        m_TargetAssemblyTypeName: Almanaque, Assembly-CSharp
+        m_MethodName: NoSirve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1434145027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1856,7 +1904,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!1 &1499596268
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,7 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56b2987953b26284292b1803533b5ab4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Variablemensaje: {fileID: 0}
+  Variablemensaje: {fileID: 1448760181}
   MensajesUI: {fileID: 1448760184}
   Pagina1: {fileID: 1127193913}
   Fabricar: {fileID: 303450206}
@@ -2158,7 +2206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1747902370}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1628314091}
+        m_TargetAssemblyTypeName: Almanaque, Assembly-CSharp
+        m_MethodName: NoSirve
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1747902370
 MonoBehaviour:
   m_ObjectHideFlags: 0
