@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialogos : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class Dialogos : MonoBehaviour
     public GameObject DialogoP;
     public GameObject DialogoF;
     public GameObject DialogoM;
+    public Text dialogosUI;
+    public Text dialogosintUI;
+    public GameObject CuadroD;
 
 
     void Start()
@@ -23,34 +27,48 @@ public class Dialogos : MonoBehaviour
 
     public void mensaje1()
     {
-        Debug.Log("Hola, Beltran necesito tu ayuda  -presiona F para continuar");
+        //Debug.Log("Hola, Beltran necesito tu ayuda  -presiona F para continuar");
+        dialogosUI.text = "Hola, Beltran necesito tu ayuda";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
         if (Input.GetKeyUp(KeyCode.F))
         {
             Destroy(DialogoI);
             DialogoP.SetActive(true);
             arribaP();
+            CuadroD.SetActive(false);
         }
     }
 
     public void mensaje2()
     {
-        Debug.Log("Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rapidas  -presiona F para continuar");
+        //Debug.Log("Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rapidas  -presiona F para continuar");
+        dialogosUI.text = "Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rapidas";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
         if (Input.GetKeyUp(KeyCode.F))
         {
             Destroy(DialogoP);
             DialogoF.SetActive(true);
             arribaF();
+            CuadroD.SetActive(false);
         }
     }
 
     public void mensaje3()
     {
-        Debug.Log("¿Me ayudarias a atraparlas y ponerlas en el gallinero?  -presiona F para continuar");
+        //Debug.Log("¿Me ayudarias a atraparlas y ponerlas en el gallinero?  -presiona F para continuar");
+        dialogosUI.text = "¿Me ayudarias a atraparlas y ponerlas en el gallinero?";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
         if (Input.GetKeyUp(KeyCode.F))
         {
             Destroy(DialogoF);
             DialogoM.SetActive(true);
             arribaM();
+            CuadroD.SetActive(false);
         }
     }
 

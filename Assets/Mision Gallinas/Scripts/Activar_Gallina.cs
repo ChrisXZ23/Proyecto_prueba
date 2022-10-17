@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Activar_Gallina : MonoBehaviour
 {
@@ -42,6 +43,9 @@ public class Activar_Gallina : MonoBehaviour
     public GameObject Indicador4;
     public GameObject Indicador5;
     public GameObject Indicador6;
+    public Text mInicio;
+    public GameObject CuadroM;
+    public Text dmInicio;
 
 
 
@@ -495,6 +499,7 @@ public class Activar_Gallina : MonoBehaviour
             mensajeInicioM();
             abrirPuerta();
             Destroy(misionI);
+            CuadroM.SetActive(false);
         }
     }
 
@@ -505,7 +510,10 @@ public class Activar_Gallina : MonoBehaviour
 
     public void mensajeMision()
     {
-        Debug.Log("Iniciar misión");
+        //Debug.Log("Iniciar misión");
+        mInicio.text = "Presiona F para comenzar misión";
+        dmInicio.text = "";
+        CuadroM.SetActive(true);
         inicioMision();
 
     }
