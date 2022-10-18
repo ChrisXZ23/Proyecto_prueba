@@ -37,6 +37,8 @@ public class Dialogos : MonoBehaviour
             DialogoP.SetActive(true);
             arribaP();
             CuadroD.SetActive(false);
+
+            
         }
     }
 
@@ -47,12 +49,14 @@ public class Dialogos : MonoBehaviour
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
+
         if (Input.GetKeyUp(KeyCode.F))
         {
             Destroy(DialogoP);
             DialogoF.SetActive(true);
             arribaF();
             CuadroD.SetActive(false);
+
         }
     }
 
@@ -63,12 +67,15 @@ public class Dialogos : MonoBehaviour
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
+
         if (Input.GetKeyUp(KeyCode.F))
         {
             Destroy(DialogoF);
             DialogoM.SetActive(true);
             arribaM();
             CuadroD.SetActive(false);
+
+
         }
     }
 

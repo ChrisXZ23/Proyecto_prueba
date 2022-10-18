@@ -43,9 +43,13 @@ public class Activar_Gallina : MonoBehaviour
     public GameObject Indicador4;
     public GameObject Indicador5;
     public GameObject Indicador6;
+    public GameObject Salida;
+    public GameObject salida2;
     public Text mInicio;
     public GameObject CuadroM;
     public Text dmInicio;
+    public Text dmactual;
+    public GameObject cuadroA;
 
 
 
@@ -113,7 +117,8 @@ public class Activar_Gallina : MonoBehaviour
         {
             Destroy(gallinas);
             Destroy(Reco);
-            Debug.Log("Has agarrado una gallina ");
+            //Debug.Log("Has agarrado una gallina ");
+            dmactual.text = "ve al gallinero";
             gallinaReco();
             Particula1();
             EncenderGallinero();
@@ -126,7 +131,8 @@ public class Activar_Gallina : MonoBehaviour
         {
             Destroy(gallinas2);
             Destroy(Reco2);
-            Debug.Log("Has agarrado una gallina ");
+            //Debug.Log("Has agarrado una gallina ");
+            dmactual.text = "ve al gallinero";
             gallinaReco();
             Particula2();
             EncenderGallinero2();
@@ -139,7 +145,8 @@ public class Activar_Gallina : MonoBehaviour
         {
             Destroy(gallinas3);
             Destroy(Reco3);
-            Debug.Log("Has agarrado una gallina ");
+            //Debug.Log("Has agarrado una gallina ");
+            dmactual.text = "ve al gallinero";
             gallinaReco();
             Particula3();
             EncenderGallinero3();
@@ -152,7 +159,8 @@ public class Activar_Gallina : MonoBehaviour
         {
             Destroy(gallinas4);
             Destroy(Reco4);
-            Debug.Log("Has agarrado una gallina ");
+            //Debug.Log("Has agarrado una gallina ");
+            dmactual.text = "ve al gallinero";
             gallinaReco();
             Particula4();
             EncenderGallinero4();
@@ -165,7 +173,8 @@ public class Activar_Gallina : MonoBehaviour
         {
             Destroy(gallinas5);
             Destroy(Reco5);
-            Debug.Log("Has agarrado una gallina ");
+            //Debug.Log("Has agarrado una gallina ");
+            dmactual.text = "ve al gallinero";
             gallinaReco();
             Particula5();
             EncenderGallinero5();
@@ -178,7 +187,8 @@ public class Activar_Gallina : MonoBehaviour
         {
             Destroy(gallinas6);
             Destroy(Reco6);
-            Debug.Log("Has agarrado una gallina ");
+            //Debug.Log("Has agarrado una gallina ");
+            dmactual.text = "ve al gallinero";
             gallinaReco();
             Particula6();
             EncenderGallinero6();
@@ -187,7 +197,8 @@ public class Activar_Gallina : MonoBehaviour
 
     void mensaje()
     {
-        Debug.Log("Agarra la gallina");
+        //Debug.Log("Agarra la gallina");
+        dmactual.text = "Atrapa a la gallina";
     }
 
     void gallinaReco()
@@ -233,7 +244,8 @@ public class Activar_Gallina : MonoBehaviour
         if (numeroG == 6)
         {
             misionT.SetActive(true);
-            Debug.Log("Sal del gallinero");
+            //Debug.Log("Sal del gallinero");
+            dmactual.text = "Sal del gallinero";
         }
     }
 
@@ -246,6 +258,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador);
             gallinaNoReco();
             gallinaDejada();
+            dmactual.text = "";
         }
     }
 
@@ -257,6 +270,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador2);
             gallinaNoReco();
             gallinaDejada2();
+            dmactual.text = "";
         }
     }
 
@@ -268,6 +282,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador3);
             gallinaNoReco();
             gallinaDejada3();
+            dmactual.text = "";
         }
     }
 
@@ -279,6 +294,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador4);
             gallinaNoReco();
             gallinaDejada4();
+            dmactual.text = "";
         }
     }
 
@@ -290,6 +306,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador5);
             gallinaNoReco();
             gallinaDejada5();
+            dmactual.text = "";
         }
     }
 
@@ -301,6 +318,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador6);
             gallinaNoReco();
             gallinaDejada6();
+            dmactual.text = "";
         }
     }
 
@@ -310,7 +328,8 @@ public class Activar_Gallina : MonoBehaviour
     }
     void mensajeGallina()
     {
-        Debug.Log("soltar gallina");
+        //Debug.Log("soltar gallina");
+        dmactual.text = "Soltar gallina";
     }
     void gallinaDejada()
     {
@@ -385,11 +404,9 @@ public class Activar_Gallina : MonoBehaviour
     }
 
 
-    public void GP(Collider other)
+    public void GP()
     {
-        if (other.transform.tag == "GallinaP")
-        {
-
+        
 
                 dejarGallinas();
 
@@ -397,15 +414,14 @@ public class Activar_Gallina : MonoBehaviour
 
             mensajeGallina();
 
-        }
+       
 
 
     }
 
-    public void GP2(Collider other)
+    public void GP2()
     {
-        if (other.transform.tag == "GallinaP")
-        {
+        
 
 
 
@@ -415,15 +431,14 @@ public class Activar_Gallina : MonoBehaviour
 
             mensajeGallina();
 
-        }
+        
 
 
     }
 
-    public void GP3(Collider other)
+    public void GP3()
     {
-        if (other.transform.tag == "GallinaP")
-        {
+        
 
 
 
@@ -434,16 +449,14 @@ public class Activar_Gallina : MonoBehaviour
 
             mensajeGallina();
 
-        }
+       
 
 
     }
 
-    public void GP4(Collider other)
+    public void GP4()
     {
-        if (other.transform.tag == "GallinaP")
-        {
-
+       
 
                 dejarGallinas4();
 
@@ -451,16 +464,14 @@ public class Activar_Gallina : MonoBehaviour
 
             mensajeGallina();
 
-        }
+        
 
 
     }
 
-    public void GP5(Collider other)
+    public void GP5()
     {
-        if (other.transform.tag == "GallinaP")
-        {
-
+        
 
 
                 dejarGallinas5();
@@ -469,15 +480,14 @@ public class Activar_Gallina : MonoBehaviour
 
             mensajeGallina();
 
-        }
+ 
 
 
     }
 
-    public void GP6(Collider other)
+    public void GP6()
     {
-        if (other.transform.tag == "GallinaP")
-        {
+      
 
 
 
@@ -486,7 +496,7 @@ public class Activar_Gallina : MonoBehaviour
 
             mensajeGallina();
 
-        }
+
 
 
     }
@@ -500,12 +510,16 @@ public class Activar_Gallina : MonoBehaviour
             abrirPuerta();
             Destroy(misionI);
             CuadroM.SetActive(false);
+            cuadroA.SetActive(true);
+
+
         }
     }
 
     void mensajeInicioM()
     {
-        Debug.Log("Atrapa todas las gallinas");
+        //Debug.Log("Atrapa todas las gallinas");
+        dmactual.text = "Atrapa a todas las gallinas y llevalas al gallinero";
     }
 
     public void mensajeMision()
@@ -532,7 +546,8 @@ public class Activar_Gallina : MonoBehaviour
     {
         cerrarPuerta();
         Destroy(misionT);
-        Debug.Log("Mision completada, dirigete con el aldeano");
+        //Debug.Log("Mision completada, dirigete con el aldeano");
+        dmactual.text = "Mision completada, dirigete con el aldeano";
         mensajeF.SetActive(true);
         Indicador7.SetActive(true);
     }
@@ -547,17 +562,50 @@ public class Activar_Gallina : MonoBehaviour
     public void mensajeFinal()
     {
         mensajeMisionG();
-        Debug.Log("Preciona F para hablar");
+        //Debug.Log("Preciona F para hablar");
+        mInicio.text = "Presiona F para hablar";
+        dmInicio.text = "";
+        CuadroM.SetActive(true);
+        cuadroA.SetActive(false);
     }
 
     void mensajeMisionG()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("Muchas por tu ayuda");
+            //Debug.Log("Muchas por tu ayuda");
+            mInicio.text = "";
+            dmInicio.text = "";
             Destroy(mensajeF);
             Destroy(Indicador7);
+            Salida.SetActive(true);
+            CuadroM.SetActive(false);
+            salida2.SetActive(true);
+            //mensajeF.SetActive(false);
         }
+    }
+
+    public void despuesDelFin()
+    {
+        salida2.SetActive(true);
+
+    }
+
+    public void mensajeFinal2()
+    {
+        mInicio.text = "Muchas gracias por tu ayuda";
+        dmInicio.text = "";
+        CuadroM.SetActive(true);
+
+    }
+
+    public void salidaMG()
+    {
+       
+        Destroy(Salida);
+        Destroy(salida2);
+        
+        CuadroM.SetActive(false);
     }
 
 }
