@@ -53,6 +53,7 @@ public class Activar_Gallina : MonoBehaviour
 
 
 
+
     public void activarGallinas()
     {
 
@@ -258,7 +259,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador);
             gallinaNoReco();
             gallinaDejada();
-            dmactual.text = "";
+            dmactual.text = "aún quedan gallinas";
         }
     }
 
@@ -270,7 +271,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador2);
             gallinaNoReco();
             gallinaDejada2();
-            dmactual.text = "";
+            dmactual.text = "aún quedan gallinas";
         }
     }
 
@@ -282,7 +283,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador3);
             gallinaNoReco();
             gallinaDejada3();
-            dmactual.text = "";
+            dmactual.text = "aún quedan gallinas";
         }
     }
 
@@ -294,7 +295,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador4);
             gallinaNoReco();
             gallinaDejada4();
-            dmactual.text = "";
+            dmactual.text = "aún quedan gallinas";
         }
     }
 
@@ -306,7 +307,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador5);
             gallinaNoReco();
             gallinaDejada5();
-            dmactual.text = "";
+            dmactual.text = "aún quedan gallinas";
         }
     }
 
@@ -318,7 +319,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador6);
             gallinaNoReco();
             gallinaDejada6();
-            dmactual.text = "";
+            dmactual.text = "aún quedan gallinas";
         }
     }
 
@@ -330,6 +331,7 @@ public class Activar_Gallina : MonoBehaviour
     {
         //Debug.Log("soltar gallina");
         dmactual.text = "Soltar gallina";
+        
     }
     void gallinaDejada()
     {
