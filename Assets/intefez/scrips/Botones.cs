@@ -9,6 +9,12 @@ public class Botones : MonoBehaviour
     public GameObject BotonInicio;
     public GameObject PanelPausa;
     public GameObject Opciones;
+    private Animator TranscionAnim;
+
+    void Start()
+    {
+        TranscionAnim = GetComponent<Animator>();
+    }
 
     public void BotonPlay()
     {
@@ -43,10 +49,9 @@ public class Botones : MonoBehaviour
         }
     }
 
-    public void OpcionesdelJuego()
+    public void OpcionesdelJuego(string scene)
     {
-        Opciones.SetActive(true);
-        Time.timeScale = 0;
+        StartCoroutine(Transiciona(scene));
     }
 
     public void RegresarPausa()
@@ -54,4 +59,17 @@ public class Botones : MonoBehaviour
         Opciones.SetActive(false);
         Time.timeScale = 0;
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
+    IEnumerator Transiciona(string scene)
+    {
+        TranscionAnim.SetTrigger("salida");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(7);
+    }
+
 }

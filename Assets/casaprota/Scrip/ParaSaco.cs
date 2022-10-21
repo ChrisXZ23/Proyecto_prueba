@@ -6,6 +6,12 @@ using UnityEngine.SceneManagement;
 public class ParaSaco : mensajes
 {
     public GameObject Saco;
+    private Animator TranscionAnim;
+
+    void Start()
+    {
+        TranscionAnim = GetComponent<Animator>();
+    }
 
     public void RecogerSaco()
     {
@@ -18,14 +24,18 @@ public class ParaSaco : mensajes
         }
     }
 
-    public void Mevoy()
+    public void Mevoy(string scene)
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            SceneManager.LoadScene(2);
-            Invoke("ResetearTexto", 2f);
-            SceneManager.LoadScene(2);
+            StartCoroutine(Transiciona(scene));
         }
     }
 
+    IEnumerator Transiciona(string scene)
+    {
+        TranscionAnim.SetTrigger("salida");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(2);
+    }
 }

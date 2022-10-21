@@ -15,7 +15,7 @@ public class Almanaque : mensajes
 
     public void FabricarMedi()
     {
-        
+        Aviso.SetActive(true);
         MensajesUI.text = "Medicina fabricada";
         Invoke("ResetearTexto", 2f);
     }
@@ -23,6 +23,8 @@ public class Almanaque : mensajes
     public void NoSirve()
     {
         MensajesUI.text = "No disponible";
+        Aviso.SetActive(true);
+        Pagina1.SetActive(false);
         Invoke("ResetearTexto", 2f);
     }
 }

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/intefez/Mapas.unity
     guid: 71f21a8021015394d9dd53337d64b12c
+  - enabled: 1
+    path: Assets/intefez/Opciones.unity
+    guid: 94ecd7c2da2749a498e5925611f4bbbc
   m_configObjects: {}
