@@ -39,14 +39,7 @@ public class Botones : MonoBehaviour
     public void Regreso()
     {
         SceneManager.LoadScene(0);
-    }
-
-    public void AbrirAlmanaque()
-    {
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            SceneManager.LoadScene(5);
-        }
+        Time.timeScale = 1;
     }
 
     public void OpcionesdelJuego(string scene)

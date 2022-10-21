@@ -24,9 +24,8 @@ public class PrimerosMensajes : mensajes
         {
             Variablemensaje.SetActive(true);
             MensajesUI.text = "Agarra el saco con el boton F";
-            Invoke("ResetearTexto", 2f);
+            Invoke("ResetearTexto", 1f);
             Principal.SetActive(false);
-            Time.timeScale = 1;
         }
     }
 }

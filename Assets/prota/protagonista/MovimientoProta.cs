@@ -7,6 +7,24 @@ public class MovimientoProta : MonoBehaviour
     public float velocidad;
     public float fuerza;
 
+    public void noMovimiento()
+    {
+        if(velocidad == 0.3f)
+        {
+            //Debug.Log("No hay movimiento");
+            velocidad = 0;
+        }
+    }
+
+    public void sMovimiento()
+    {
+        if (velocidad == 0)
+        {
+            //Debug.Log("Hay movimiento");
+            velocidad = 0.3f;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
