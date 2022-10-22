@@ -38,8 +38,12 @@ public class Dialogos : MonoBehaviour
             arribaP();
             CuadroD.SetActive(false);
 
-            
         }
+    }
+
+    public void mensajeFuera()
+    {
+        CuadroD.SetActive(false);
     }
 
     public void mensaje2()

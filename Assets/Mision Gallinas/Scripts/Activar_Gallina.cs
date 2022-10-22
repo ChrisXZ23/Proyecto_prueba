@@ -242,6 +242,7 @@ public class Activar_Gallina : MonoBehaviour
     void numeroGallinas()
     {
         numeroG++;
+        
         if (numeroG == 6)
         {
             misionT.SetActive(true);
@@ -249,6 +250,15 @@ public class Activar_Gallina : MonoBehaviour
             dmactual.text = "Sal del gallinero";
         }
     }
+
+
+
+    public void mensajeMg()
+    {
+        dmactual.text = "aún quedan gallinas";
+    }
+
+
 
 
     void dejarGallinas()
@@ -259,7 +269,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador);
             gallinaNoReco();
             gallinaDejada();
-            dmactual.text = "aún quedan gallinas";
+            
         }
     }
 
