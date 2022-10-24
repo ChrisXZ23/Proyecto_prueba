@@ -1529,7 +1529,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1628314091}
         m_TargetAssemblyTypeName: Almanaque, Assembly-CSharp
-        m_MethodName: NoSirve
+        m_MethodName: NoCambio
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

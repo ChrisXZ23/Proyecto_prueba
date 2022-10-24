@@ -27,4 +27,11 @@ public class Almanaque : mensajes
         Pagina1.SetActive(false);
         Invoke("ResetearTexto", 2f);
     }
+
+    public void NoCambio()
+    {
+        MensajesUI.text = "No disponible";
+        Aviso.SetActive(true);
+        Invoke("ResetearTexto", 2f);
+    }
 }
