@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Dialogos : MonoBehaviour
 {
+    public GameObject camaraPlayer;
+    public GameObject camaraFija;
     public GameObject DialogoI;
     public GameObject DialogoP;
     public GameObject DialogoF;
@@ -37,6 +39,9 @@ public class Dialogos : MonoBehaviour
             DialogoP.SetActive(true);
             arribaP();
             CuadroD.SetActive(false);
+
+            camaraPlayer.SetActive(false);
+            camaraFija.SetActive(true);
 
         }
     }
