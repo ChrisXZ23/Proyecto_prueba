@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class Activar_Gallina : MonoBehaviour
 {
+    public GameObject cuboAntes;
+    public GameObject camaraP;
+    public GameObject camaraF;
+    public GameObject MensajeS;
+    public GameObject MensajeA;
     public GameObject puertaA;
     public GameObject misionI;
     public GameObject misionT;
@@ -242,13 +247,50 @@ public class Activar_Gallina : MonoBehaviour
     void numeroGallinas()
     {
         numeroG++;
+        
         if (numeroG == 6)
         {
             misionT.SetActive(true);
             //Debug.Log("Sal del gallinero");
-            dmactual.text = "Sal del gallinero";
+            MensajeS.SetActive(true);
+            BorrarCuadroAM();
         }
     }
+
+    public void MensajeSalida1()
+    {
+        dmactual.text = "Sal del gallinero";
+    }
+
+    public void borrarmensaje()
+    {
+        Destroy(MensajeS);
+    }
+
+
+
+    public void mensajeMg()
+    {
+        dmactual.text = "aún quedan gallinas";
+    }
+
+
+    void BorrarCuadroAM()
+    {
+        Destroy(MensajeA);
+    }
+
+    void cuadroAM()
+    {
+        MensajeA.SetActive(true);
+    }
+
+    public void cuadroMg()
+    {
+        MensajeA.SetActive(false);
+
+    }
+
 
 
     void dejarGallinas()
@@ -259,7 +301,8 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador);
             gallinaNoReco();
             gallinaDejada();
-            dmactual.text = "aún quedan gallinas";
+            cuadroAM();
+            
         }
     }
 
@@ -271,7 +314,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador2);
             gallinaNoReco();
             gallinaDejada2();
-            dmactual.text = "aún quedan gallinas";
+            cuadroAM();
         }
     }
 
@@ -283,7 +326,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador3);
             gallinaNoReco();
             gallinaDejada3();
-            dmactual.text = "aún quedan gallinas";
+            cuadroAM();
         }
     }
 
@@ -295,7 +338,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador4);
             gallinaNoReco();
             gallinaDejada4();
-            dmactual.text = "aún quedan gallinas";
+            cuadroAM();
         }
     }
 
@@ -307,7 +350,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador5);
             gallinaNoReco();
             gallinaDejada5();
-            dmactual.text = "aún quedan gallinas";
+            cuadroAM();
         }
     }
 
@@ -319,7 +362,7 @@ public class Activar_Gallina : MonoBehaviour
             Destroy(Indicador6);
             gallinaNoReco();
             gallinaDejada6();
-            dmactual.text = "aún quedan gallinas";
+            cuadroAM();
         }
     }
 
@@ -514,6 +557,10 @@ public class Activar_Gallina : MonoBehaviour
             CuadroM.SetActive(false);
             cuadroA.SetActive(true);
 
+            camaraF.SetActive(false);
+            camaraP.SetActive(true);
+
+            cuboAntes.SetActive(true);
 
         }
     }
@@ -522,6 +569,11 @@ public class Activar_Gallina : MonoBehaviour
     {
         //Debug.Log("Atrapa todas las gallinas");
         dmactual.text = "Atrapa a todas las gallinas y llevalas al gallinero";
+    }
+
+    public void cuboAntesM()
+    {
+        Destroy(cuboAntes);
     }
 
     public void mensajeMision()
