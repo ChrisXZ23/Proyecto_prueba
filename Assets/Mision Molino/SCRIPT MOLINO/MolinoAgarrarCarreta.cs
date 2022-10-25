@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class misionGranja_carreta : MonoBehaviour
+public class MolinoAgarrarCarreta : MonoBehaviour
 {
     public GameObject Corn;
     public Transform Interaction;
