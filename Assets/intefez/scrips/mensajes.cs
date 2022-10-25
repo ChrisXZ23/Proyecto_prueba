@@ -7,6 +7,7 @@ public class mensajes : MonoBehaviour
 {
     public GameObject Variablemensaje;
     public Text MensajesUI;
+    public Text PresionaL;
 
     public virtual void ResetearTexto()
     {
