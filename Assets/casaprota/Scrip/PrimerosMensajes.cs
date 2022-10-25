@@ -6,15 +6,10 @@ public class PrimerosMensajes : mensajes
 {
     public GameObject Principal;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Primero1()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        Principal.SetActive(true);
+        PresionaL.text = "BELTRAAAAAM, Sal necesito hablar contigo";
         
     }
 
@@ -22,6 +17,7 @@ public class PrimerosMensajes : mensajes
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
+            Destroy(Principal);
             Variablemensaje.SetActive(true);
             MensajesUI.text = "Agarra el saco con el boton F";
             Invoke("ResetearTexto", 1f);

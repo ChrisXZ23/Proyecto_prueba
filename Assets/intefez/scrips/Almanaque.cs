@@ -7,10 +7,12 @@ public class Almanaque : mensajes
     public GameObject Pagina1;
     public GameObject Fabricar;
     public GameObject Aviso;
+    public GameObject NewMensaje;
 
    public void Pagina()
     {
         Pagina1.SetActive(true);
+
     }
 
     public void FabricarMedi()

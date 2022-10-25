@@ -10,6 +10,8 @@ public class DialogosAlcalde : MonoBehaviour
     public GameObject Box1;
     public GameObject Box2;
     public GameObject Box3;
+    public GameObject siguiente;
+    public GameObject AlmanaqueTrue;
 
     public void Alcalde()
     {
@@ -38,6 +40,18 @@ public class DialogosAlcalde : MonoBehaviour
         {
             MensajesUI.text = "Presiona G para abrir el Almanaque";
             Destroy(Box3);
+            siguiente.SetActive(true);
         }
     }
+
+    public void Alcalde3()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AlmanaqueTrue.SetActive(true);
+            Destroy(siguiente);
+            Charla.SetActive(false);
+        }
+    }
+           
 }
