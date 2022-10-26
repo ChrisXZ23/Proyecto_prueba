@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DIalogosMolino : MonoBehaviour
+public class MolinoDialogos : MonoBehaviour
 {
     public GameObject Dialogo1;
     public GameObject Dialogo2;
     public GameObject Dialogo3;
-    public GameObject Dialogo4;
+    //public GameObject Dialogo4;
     public Text dialogosUI;
     public Text dialogosintUI;
     public GameObject CuadroD;

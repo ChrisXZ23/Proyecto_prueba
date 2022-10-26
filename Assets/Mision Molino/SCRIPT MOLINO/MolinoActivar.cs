@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ACTIVARMolino : MonoBehaviour
+public class MolinoActivar : MonoBehaviour
 {
     public GameObject ActivarDialogos;
     public GameObject dialogo1;

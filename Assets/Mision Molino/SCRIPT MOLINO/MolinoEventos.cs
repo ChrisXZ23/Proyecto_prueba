@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MisionMolinoEventos : MonoBehaviour
+public class MolinoEventos : MonoBehaviour
 {
     [SerializeField] private UnityEvent ColliderEnter;
     [SerializeField] private UnityEvent TriggerEnter;
