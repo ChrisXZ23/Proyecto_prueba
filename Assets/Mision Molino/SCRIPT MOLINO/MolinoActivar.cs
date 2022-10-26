@@ -15,7 +15,7 @@ public class MolinoActivar : MonoBehaviour
     public Text dialogosintUI;
     public GameObject CuadroD;
     public GameObject finMision;
-
+    public GameObject Maices;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +44,7 @@ public class MolinoActivar : MonoBehaviour
             //carreta.SetActive(true);
             textMaiz.SetActive(true);
             CONMAIZ.SetActive(true);
+            Maices.SetActive(true);
 
 
         }
@@ -71,4 +72,5 @@ public class MolinoActivar : MonoBehaviour
             Destroy(finMision);
         }
     }
+
 }
