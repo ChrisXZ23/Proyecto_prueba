@@ -31,7 +31,7 @@ public class MovimientoProta : MonoBehaviour
 
         if (Input.GetKey("left shift"))
         {
-            transform.Translate(Input.GetAxis("Horizontal") * velocidad * 0.3f, 0, Input.GetAxis("Vertical") * velocidad * 0.3f);
+            transform.Translate(Input.GetAxis("Horizontal") * velocidad * 3, 0, Input.GetAxis("Vertical") * velocidad * 3);
         }
 
     }

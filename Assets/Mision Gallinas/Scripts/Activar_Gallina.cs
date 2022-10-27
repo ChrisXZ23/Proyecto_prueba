@@ -50,11 +50,23 @@ public class Activar_Gallina : MonoBehaviour
     public GameObject Indicador6;
     public GameObject Salida;
     public GameObject salida2;
+
+    public GameObject textoCompletado;
     public Text mInicio;
     public GameObject CuadroM;
     public Text dmInicio;
     public Text dmactual;
     public GameObject cuadroA;
+
+    public GameObject audioMision;
+    public GameObject audioD2;
+    public GameObject audioGallinas;
+    public GameObject audioCompletado;
+
+    [SerializeField] private int conteoG;
+    public GameObject contadorG;
+    public GameObject imagenGallina;
+    public Text contadorGallinas;
 
 
 
@@ -68,6 +80,7 @@ public class Activar_Gallina : MonoBehaviour
         gallinas4.SetActive(true);
         gallinas5.SetActive(true);
         gallinas6.SetActive(true);
+        audioGallinas.SetActive(true);
 
     }
 
@@ -117,6 +130,50 @@ public class Activar_Gallina : MonoBehaviour
         mensaje();
     }
 
+    void conteoGallinas1()
+    {
+
+        conteoG++;
+        if (conteoG == 1)
+        {
+            //conteoG +=1;
+            //Debug.Log("Te faltan = 5 gallinas");
+            contadorGallinas.text = "1 / 6";
+        }
+        if (conteoG == 2)
+        {
+            //conteoG +=1;
+            //Debug.Log("Te faltan = 4 gallinas");
+            contadorGallinas.text = "2 / 6";
+        }
+        if (conteoG == 3)
+        {
+            //conteoG +=1;
+            //Debug.Log("Te faltan = 3 gallinas");
+            contadorGallinas.text = "3 / 6";
+        }
+        if (conteoG == 4)
+        {
+            //conteoG +=1;
+            //Debug.Log("Te faltan = 2 gallinas");
+            contadorGallinas.text = "4 / 6";
+        }
+        if (conteoG == 5)
+        {
+            //conteoG +=1;
+            //Debug.Log("Te faltan = 1 gallina");
+            contadorGallinas.text = "5 / 6";
+        }
+        if (conteoG == 6)
+        {
+            //conteoG +=1;
+            //Debug.Log("Tienes todas las gallinas dirigete al gallinero");
+            contadorGallinas.text = "6 / 6";
+        }
+    }
+
+
+
     void AgarrarGallinas()
     {
         if (Input.GetKeyDown(KeyCode.F))
@@ -128,6 +185,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaReco();
             Particula1();
             EncenderGallinero();
+            conteoGallinas1();
         }
     }
 
@@ -142,6 +200,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaReco();
             Particula2();
             EncenderGallinero2();
+            conteoGallinas1();
         }
     }
 
@@ -156,6 +215,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaReco();
             Particula3();
             EncenderGallinero3();
+            conteoGallinas1();
         }
     }
 
@@ -170,6 +230,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaReco();
             Particula4();
             EncenderGallinero4();
+            conteoGallinas1();
         }
     }
 
@@ -184,6 +245,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaReco();
             Particula5();
             EncenderGallinero5();
+            conteoGallinas1();
         }
     }
 
@@ -198,13 +260,14 @@ public class Activar_Gallina : MonoBehaviour
             gallinaReco();
             Particula6();
             EncenderGallinero6();
+            conteoGallinas1();
         }
     }
 
     void mensaje()
     {
         //Debug.Log("Agarra la gallina");
-        dmactual.text = "Atrapa a la gallina";
+        dmactual.text = "Atrapa a la gallina con F";
     }
 
     void gallinaReco()
@@ -254,6 +317,10 @@ public class Activar_Gallina : MonoBehaviour
             //Debug.Log("Sal del gallinero");
             MensajeS.SetActive(true);
             BorrarCuadroAM();
+
+            audioD2.SetActive(true);
+
+            Destroy(audioMision);
         }
     }
 
@@ -302,7 +369,9 @@ public class Activar_Gallina : MonoBehaviour
             gallinaNoReco();
             gallinaDejada();
             cuadroAM();
-            
+
+            Debug.Log("");
+
         }
     }
 
@@ -315,6 +384,8 @@ public class Activar_Gallina : MonoBehaviour
             gallinaNoReco();
             gallinaDejada2();
             cuadroAM();
+
+            Debug.Log("");
         }
     }
 
@@ -327,6 +398,8 @@ public class Activar_Gallina : MonoBehaviour
             gallinaNoReco();
             gallinaDejada3();
             cuadroAM();
+
+            Debug.Log("");
         }
     }
 
@@ -339,6 +412,8 @@ public class Activar_Gallina : MonoBehaviour
             gallinaNoReco();
             gallinaDejada4();
             cuadroAM();
+
+            Debug.Log("");
         }
     }
 
@@ -351,6 +426,8 @@ public class Activar_Gallina : MonoBehaviour
             gallinaNoReco();
             gallinaDejada5();
             cuadroAM();
+
+            Debug.Log("");
         }
     }
 
@@ -363,6 +440,8 @@ public class Activar_Gallina : MonoBehaviour
             gallinaNoReco();
             gallinaDejada6();
             cuadroAM();
+
+            Debug.Log("");
         }
     }
 
@@ -562,6 +641,13 @@ public class Activar_Gallina : MonoBehaviour
 
             cuboAntes.SetActive(true);
 
+            audioD2.SetActive(false);
+
+            audioMision.SetActive(true);
+
+            contadorG.SetActive(true);
+            imagenGallina.SetActive(true);
+
         }
     }
 
@@ -601,9 +687,11 @@ public class Activar_Gallina : MonoBehaviour
         cerrarPuerta();
         Destroy(misionT);
         //Debug.Log("Mision completada, dirigete con el aldeano");
-        dmactual.text = "Mision completada, dirigete con el aldeano";
+        dmactual.text = "Dirigete con el aldeano";
         mensajeF.SetActive(true);
         Indicador7.SetActive(true);
+        Destroy(contadorG);
+        Destroy(imagenGallina);
     }
 
     void cerrarPuerta()
@@ -635,6 +723,9 @@ public class Activar_Gallina : MonoBehaviour
             Salida.SetActive(true);
             CuadroM.SetActive(false);
             salida2.SetActive(true);
+
+            Destroy(audioGallinas);
+            
             //mensajeF.SetActive(false);
         }
     }
@@ -660,6 +751,10 @@ public class Activar_Gallina : MonoBehaviour
         Destroy(salida2);
         
         CuadroM.SetActive(false);
+
+        audioCompletado.SetActive(true);
+        Destroy(audioD2);
+        textoCompletado.SetActive(true);
     }
 
 }
