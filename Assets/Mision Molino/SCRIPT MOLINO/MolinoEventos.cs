@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 public class MolinoEventos : MonoBehaviour
 {
-    [SerializeField] private UnityEvent ColliderEnter;
+    [SerializeField] private UnityEvent TriggerExit;
     [SerializeField] private UnityEvent TriggerEnter;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        if (collision.transform.tag == "Player")
+        if (other.transform.tag == "Player")
         {
-            ColliderEnter.Invoke();
+            TriggerExit.Invoke();
         }
     }
 

@@ -12,6 +12,8 @@ public class MolinoDialogos : MonoBehaviour
     public Text dialogosUI;
     public Text dialogosintUI;
     public GameObject CuadroD;
+    public GameObject Camaraplayer;
+    public GameObject CamaraMolino;
 
 
     void Start()
@@ -73,6 +75,8 @@ public class MolinoDialogos : MonoBehaviour
             //Dialogo4.SetActive(true);
             //arribaM();
             CuadroD.SetActive(false);
+            CamaraMolino.SetActive(false);
+            Camaraplayer.SetActive(true);
         }
     }
 }
