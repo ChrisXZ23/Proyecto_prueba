@@ -62,7 +62,7 @@ public class Botones : MonoBehaviour
     {
         TranscionAnim.SetTrigger("salida");
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(7);
+        SceneManager.LoadScene(6);
     }
 
 }
