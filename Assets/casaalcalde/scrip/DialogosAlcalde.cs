@@ -11,7 +11,9 @@ public class DialogosAlcalde : MonoBehaviour
     public GameObject Box2;
     public GameObject Box3;
     public GameObject siguiente;
-    public GameObject AlmanaqueTrue;
+    public GameObject AlcaldeF1;
+    public GameObject AlcaldeF2;
+    public GameObject AplicarLacura;
 
     public void Alcalde()
     {
@@ -21,6 +23,26 @@ public class DialogosAlcalde : MonoBehaviour
             Charla.SetActive(true);
             Box2.SetActive(true);
             Destroy(Box1);
+            Destroy(AlcaldeF1);
+        }
+    }
+
+    public void AlcaldeF()
+    {
+        AlcaldeF1.SetActive(true);
+    }
+
+    public void Curar()
+    {
+        AlcaldeF2.SetActive(true);
+    }
+
+    public void Aplicar()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(AlcaldeF2);
+            Destroy(AplicarLacura);
         }
     }
 
@@ -48,7 +70,6 @@ public class DialogosAlcalde : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            AlmanaqueTrue.SetActive(true);
             Destroy(siguiente);
             Charla.SetActive(false);
         }

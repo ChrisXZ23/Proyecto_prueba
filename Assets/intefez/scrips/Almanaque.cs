@@ -8,6 +8,7 @@ public class Almanaque : mensajes
     public GameObject Fabricar;
     public GameObject Aviso;
     public GameObject NewMensaje;
+    public GameObject TodoAlmanaque;
 
    public void Pagina()
     {
@@ -35,5 +36,18 @@ public class Almanaque : mensajes
         MensajesUI.text = "No disponible";
         Aviso.SetActive(true);
         Invoke("ResetearTexto", 2f);
+    }
+
+    public void RegresoJuego()
+    {
+        TodoAlmanaque.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            TodoAlmanaque.SetActive(true);
+        }
     }
 }

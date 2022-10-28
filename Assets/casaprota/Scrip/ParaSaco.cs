@@ -6,11 +6,27 @@ using UnityEngine.SceneManagement;
 public class ParaSaco : mensajes
 {
     public GameObject Saco;
+    public GameObject FF;
     private Animator TranscionAnim;
+    public GameObject ParaF;
+    public GameObject FF2;
+    public GameObject ParaF2;
 
     void Start()
     {
         TranscionAnim = GetComponent<Animator>();
+    }
+
+    public void FBoton()
+    {
+        FF.SetActive(true);
+        Destroy(ParaF);
+    }
+
+    public void FBoton2()
+    {
+        FF2.SetActive(true);
+        Destroy(ParaF2);
     }
 
     public void RecogerSaco()
@@ -21,6 +37,7 @@ public class ParaSaco : mensajes
             Variablemensaje.SetActive(true);
             MensajesUI.text = "Tienes el saco, sal de la casa";
             Invoke("ResetearTexto", 2f);
+            FF.SetActive(false);
         }
     }
 
@@ -29,6 +46,7 @@ public class ParaSaco : mensajes
         if (Input.GetKeyDown(KeyCode.F))
         {
             StartCoroutine(Transiciona(scene));
+            
         }
     }
 

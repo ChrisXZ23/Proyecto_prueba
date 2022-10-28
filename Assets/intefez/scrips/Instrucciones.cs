@@ -10,7 +10,7 @@ public class Instrucciones : mensajes
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            MensajesUI.text = "Presiona la imagen de la medicina para ver la siguiente pagina.";
+            MensajesUI.text = "Bienvenido al Almanaque. Presiona la imagen de la medicina para ver la siguiente pagina.";
             PresionaL.text = "";
         }
             
@@ -23,6 +23,6 @@ public class Instrucciones : mensajes
 
     public void Pagina13()
     {
-        MensajesUI.text = "Ahora presiona esc para salir del menu";
+        MensajesUI.text = "Ahora presiona la X para salir del menu";
     }
 }
