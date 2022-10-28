@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Dialogos : MonoBehaviour
 {
+    public GameObject audioD;
     public GameObject camaraPlayer;
     public GameObject camaraFija;
+    public GameObject particulaD;
     public GameObject DialogoI;
     public GameObject DialogoP;
     public GameObject DialogoF;
@@ -42,6 +44,8 @@ public class Dialogos : MonoBehaviour
 
             camaraPlayer.SetActive(false);
             camaraFija.SetActive(true);
+            audioD.SetActive(true);
+            particulaD.SetActive(false);
 
         }
     }
