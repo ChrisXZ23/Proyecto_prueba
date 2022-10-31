@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class LacuraTrans : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animator TranscionCura;
+
     void Start()
     {
-        
+        TranscionCura = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CambioCura()
     {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            TransicionaCura();
+        }
+    }
+
+
+    IEnumerator TransicionaCura()
+    {
+        TranscionCura.SetTrigger("salida");
+        yield return new WaitForSeconds(1);
         
     }
 }
