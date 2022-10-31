@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Protagonista : MonoBehaviour
 {
     Animator animator;
     int isWalkingHash;
     int isrunningHash;
+
+    public Image Stamina;
+    [SerializeField] private float vStamina;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +43,58 @@ public class Protagonista : MonoBehaviour
         if (!isRunning && (walkPressed && RunPressed))
         {
             animator.SetBool(isrunningHash, true);
+            
+            
+
         }
+        
 
         if (isRunning && (!walkPressed || !RunPressed))
         {
             animator.SetBool(isrunningHash, false);
+            
         }
+
+        if (RunPressed && walkPressed)
+        {
+            StaminaV();
+        }
+
+        if (!RunPressed && !walkPressed)
+        {
+            StaminaVmas();
+        }
+        if (!RunPressed && walkPressed)
+        {
+            StaminaVmas();
+        }
+
+    }
+
+    void StaminaVmas()
+    {
+        Stamina.fillAmount = vStamina / 100;
+        vStamina++;
+        if(vStamina >= 100)
+        {
+            vStamina = 100f;
+        }
+
+            
+    }
+
+    void StaminaV()
+    {
+        Stamina.fillAmount = vStamina / 100;
+        if (Input.GetKey("left shift"))
+        {
+            vStamina--;
+        }
+        if (vStamina <= 0)
+        {
+            vStamina = 0;
+ 
+        }
+        
     }
 }

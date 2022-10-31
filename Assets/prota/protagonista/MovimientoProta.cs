@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MovimientoProta : MonoBehaviour
 {
     public float velocidad;
     public float fuerza;
+    
 
     
     void Start()
@@ -21,6 +23,8 @@ public class MovimientoProta : MonoBehaviour
         transform.Translate(0, Input.GetAxis("Jump") * fuerza, 0);
 
         movimientoS();
+
+        
     }
 
     void movimientoS()
@@ -32,8 +36,17 @@ public class MovimientoProta : MonoBehaviour
         if (Input.GetKey("left shift"))
         {
             transform.Translate(Input.GetAxis("Horizontal") * velocidad * 3, 0, Input.GetAxis("Vertical") * velocidad * 3);
+           
+
+            velocidadT();
         }
 
+    }
+
+    void velocidadT()
+    {
+
+        
     }
 
     public void noMovimiento()
