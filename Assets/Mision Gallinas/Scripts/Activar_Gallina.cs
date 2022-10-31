@@ -370,7 +370,8 @@ public class Activar_Gallina : MonoBehaviour
             gallinaDejada();
             cuadroAM();
 
-            Debug.Log("");
+            
+            dmactual.text = "";
 
         }
     }
@@ -385,7 +386,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaDejada2();
             cuadroAM();
 
-            Debug.Log("");
+            dmactual.text = "";
         }
     }
 
@@ -399,7 +400,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaDejada3();
             cuadroAM();
 
-            Debug.Log("");
+            dmactual.text = "";
         }
     }
 
@@ -413,7 +414,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaDejada4();
             cuadroAM();
 
-            Debug.Log("");
+            dmactual.text = "";
         }
     }
 
@@ -427,7 +428,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaDejada5();
             cuadroAM();
 
-            Debug.Log("");
+            dmactual.text = "";
         }
     }
 
@@ -441,7 +442,7 @@ public class Activar_Gallina : MonoBehaviour
             gallinaDejada6();
             cuadroAM();
 
-            Debug.Log("");
+            dmactual.text = "";
         }
     }
 
@@ -452,7 +453,7 @@ public class Activar_Gallina : MonoBehaviour
     void mensajeGallina()
     {
         //Debug.Log("soltar gallina");
-        dmactual.text = "Soltar gallina";
+        dmactual.text = "Presiona F para soltar a la gallina";
         
     }
     void gallinaDejada()
@@ -627,7 +628,7 @@ public class Activar_Gallina : MonoBehaviour
 
     void inicioMision()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             activarGallinas();
             mensajeInicioM();
@@ -665,7 +666,7 @@ public class Activar_Gallina : MonoBehaviour
     public void mensajeMision()
     {
         //Debug.Log("Iniciar misión");
-        mInicio.text = "Presiona F para comenzar misión";
+        mInicio.text = "Presiona L para comenzar misión";
         dmInicio.text = "";
         CuadroM.SetActive(true);
         inicioMision();
@@ -705,7 +706,7 @@ public class Activar_Gallina : MonoBehaviour
     {
         mensajeMisionG();
         //Debug.Log("Preciona F para hablar");
-        mInicio.text = "Presiona F para hablar";
+        mInicio.text = "Presiona L para hablar";
         dmInicio.text = "";
         CuadroM.SetActive(true);
         cuadroA.SetActive(false);
@@ -713,7 +714,7 @@ public class Activar_Gallina : MonoBehaviour
 
     void mensajeMisionG()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             //Debug.Log("Muchas por tu ayuda");
             mInicio.text = "";

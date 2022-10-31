@@ -33,9 +33,9 @@ public class Dialogos : MonoBehaviour
     {
         //Debug.Log("Hola, Beltran necesito tu ayuda  -presiona F para continuar");
         dialogosUI.text = "Hola, Beltran necesito tu ayuda";
-        dialogosintUI.text = "presiona F para continuar";
+        dialogosintUI.text = "presiona L para continuar";
         CuadroD.SetActive(true);
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.L))
         {
             Destroy(DialogoI);
             DialogoP.SetActive(true);
@@ -59,11 +59,11 @@ public class Dialogos : MonoBehaviour
     {
         //Debug.Log("Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rapidas  -presiona F para continuar");
         dialogosUI.text = "Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rapidas";
-        dialogosintUI.text = "presiona F para continuar";
+        dialogosintUI.text = "presiona L para continuar";
         CuadroD.SetActive(true);
 
 
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.L))
         {
             Destroy(DialogoP);
             DialogoF.SetActive(true);
@@ -77,11 +77,11 @@ public class Dialogos : MonoBehaviour
     {
         //Debug.Log("¿Me ayudarias a atraparlas y ponerlas en el gallinero?  -presiona F para continuar");
         dialogosUI.text = "¿Me ayudarias a atraparlas y ponerlas en el gallinero?";
-        dialogosintUI.text = "presiona F para continuar";
+        dialogosintUI.text = "presiona L para continuar";
         CuadroD.SetActive(true);
 
 
-        if (Input.GetKeyUp(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.L))
         {
             Destroy(DialogoF);
             DialogoM.SetActive(true);
