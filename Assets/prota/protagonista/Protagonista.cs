@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Protagonista : MonoBehaviour
+public class Protagonista : MovimientoProta
 {
     Animator animator;
     int isWalkingHash;
@@ -11,6 +11,7 @@ public class Protagonista : MonoBehaviour
 
     public Image Stamina;
     [SerializeField] private float vStamina;
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,9 +44,6 @@ public class Protagonista : MonoBehaviour
         if (!isRunning && (walkPressed && RunPressed))
         {
             animator.SetBool(isrunningHash, true);
-            
-            
-
         }
         
 
@@ -58,6 +56,7 @@ public class Protagonista : MonoBehaviour
         if (RunPressed && walkPressed)
         {
             StaminaV();
+            velocidadRS();
         }
 
         if (!RunPressed && !walkPressed)
@@ -75,11 +74,18 @@ public class Protagonista : MonoBehaviour
     {
         Stamina.fillAmount = vStamina / 100;
         vStamina++;
-        if(vStamina >= 100)
+        
+        if (vStamina >= 100)
         {
             vStamina = 100f;
+            
+        }
+        if (vStamina >= 10)
+        {
+            //velocidadT();
         }
 
+        
             
     }
 
@@ -89,12 +95,32 @@ public class Protagonista : MonoBehaviour
         if (Input.GetKey("left shift"))
         {
             vStamina--;
+            
         }
         if (vStamina <= 0)
         {
             vStamina = 0;
- 
+            
         }
         
+
+
+
     }
+
+    void velocidadRS()
+    {
+        if (vStamina >= 21)
+        {
+            velocidadT();
+            animator.SetBool(isrunningHash, true);
+        }
+        if (vStamina <= 20)
+        {
+            VelocidadmenosT();
+            animator.SetBool(isrunningHash, false);
+        }
+    }
+
+
 }

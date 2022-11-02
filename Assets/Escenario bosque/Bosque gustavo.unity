@@ -16856,6 +16856,10 @@ PrefabInstance:
       propertyPath: velocidad
       value: 0.03
       objectReference: {fileID: 0}
+    - target: {fileID: 7128590872345740268, guid: 40b514ba863898a47a69ed3dd05b45b2, type: 3}
+      propertyPath: VelocidadS
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 7938929633844358338, guid: 40b514ba863898a47a69ed3dd05b45b2, type: 3}
       propertyPath: m_TagString
       value: Player
