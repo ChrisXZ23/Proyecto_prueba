@@ -6,12 +6,18 @@ public class Recoleccion : MonoBehaviour
 {
     public GameObject particula1;
     public GameObject particula2;
+    public GameObject particula3;
+    public GameObject particula4;
     public GameObject hierbas1;
     public GameObject hierbas2;
+    public GameObject hierbas3;
+    public GameObject hierbas4;
     public GameObject cuadroMensaje;
-    public int NumeroHierbas;
+    [SerializeField] private int NumeroHierbas;
     public GameObject cuadroTrigger1;
     public GameObject cuadroTrigger2;
+    public GameObject cuadroTrigger3;
+    public GameObject cuadroTrigger4;
     //public Transform TransformPlayer;
     public GameObject enemigo;
 
@@ -35,18 +41,45 @@ public class Recoleccion : MonoBehaviour
 
     public void recogerHierbas3()
     {
-        Recoletar1();
+        Recoletar3();
         MensajeRecolectar();
+    }
+
+    public void recogerHierbas4()
+    {
+        Recoletar4();
+        MensajeRecolectar();
+    }
+
+    void numeroH()
+    {
+        NumeroHierbas++;
+        if(NumeroHierbas == 1)
+        {
+            Debug.Log("Aún queda más planta");
+        }
+        if (NumeroHierbas == 2)
+        {
+            Debug.Log("Aún queda más planta");
+        }
+        if (NumeroHierbas == 3)
+        {
+            Debug.Log("Aún queda más planta");
+        }
+        if(NumeroHierbas == 4)
+        {
+            Debug.Log("La ultima planta se encuentra adentro de la cueva");
+        }
     }
 
     void Recoletar1()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyUp(KeyCode.F))
         {
             Destroy(hierbas1);
             Destroy(cuadroTrigger1);
 
-            NumeroHierbas ++;
+            numeroH();
             Debug.Log("Has recogido " + NumeroHierbas);
             desactivarLuzciernaga();
         }
@@ -60,15 +93,42 @@ public class Recoleccion : MonoBehaviour
             Destroy(hierbas2);
             Destroy(cuadroTrigger2);
 
-            NumeroHierbas ++;
+            numeroH();
             Debug.Log("Has recogido "+ NumeroHierbas);
 
-            Enemigo();
             desactivarLuzciernaga2();
         }
 
     }
 
+    void Recoletar3()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(hierbas3);
+            Destroy(cuadroTrigger3);
+
+            numeroH();
+            Debug.Log("Has recogido " + NumeroHierbas);
+
+            //desactivarLuzciernaga2();
+        }
+
+    }
+    void Recoletar4()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Destroy(hierbas4);
+            Destroy(cuadroTrigger4);
+
+            numeroH();
+            Debug.Log("Has recogido " + NumeroHierbas);
+
+            //desactivarLuzciernaga2();
+        }
+
+    }
 
 
     void MensajeRecolectar()
