@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Recoleccion : MonoBehaviour
 {
@@ -12,19 +13,45 @@ public class Recoleccion : MonoBehaviour
     public GameObject hierbas2;
     public GameObject hierbas3;
     public GameObject hierbas4;
-    public GameObject cuadroMensaje;
+
     [SerializeField] private int NumeroHierbas;
     public GameObject cuadroTrigger1;
     public GameObject cuadroTrigger2;
     public GameObject cuadroTrigger3;
     public GameObject cuadroTrigger4;
+
+    public GameObject MensajeInicio;
+    public Text mensajeB;
+    public Text ConteoDePlantas;
+    public GameObject PlantasNumeros;
+    public Text Pensamientos;
+    public Text PensamientosBotones;
+    public Text Objetivos;
+    public GameObject Cuadropensamiento;
+    public GameObject CuboP;
+    public GameObject cuadroObjetivo;
+    public GameObject cuboB;
+
+    public GameObject entradaCueva;
     //public Transform TransformPlayer;
     public GameObject enemigo;
 
 
 
 
-
+    public void MensajeBienvenida()
+    {
+        MensajeInicio.SetActive(true);
+        mensajeB.text = "El Bosque";
+        cuadroObjetivo.SetActive(true);
+        Objetivos.text = "Busca las plantas medicinales";
+        PlantasNumeros.SetActive(true);
+    }
+    public void BmensajeBienvenida()
+    {
+        Destroy(cuboB);
+        Destroy(mensajeB);
+    }
 
 
     public void recogerHierbas()
@@ -54,23 +81,74 @@ public class Recoleccion : MonoBehaviour
     void numeroH()
     {
         NumeroHierbas++;
-        if(NumeroHierbas == 1)
+        if (NumeroHierbas == 1)
         {
-            Debug.Log("Aún queda más planta");
+            //Debug.Log("Aún queda más planta");
+            ConteoDePlantas.text = "1 / 4";
         }
         if (NumeroHierbas == 2)
         {
-            Debug.Log("Aún queda más planta");
+            //Debug.Log("Aún queda más planta");
+            ConteoDePlantas.text = "2 / 4";
         }
         if (NumeroHierbas == 3)
         {
-            Debug.Log("Aún queda más planta");
+            //Debug.Log("Aún queda más planta");
+            ConteoDePlantas.text = "3 / 4";
         }
-        if(NumeroHierbas == 4)
+        if (NumeroHierbas == 4)
         {
-            Debug.Log("La ultima planta se encuentra adentro de la cueva");
+            //Debug.Log("La ultima planta se encuentra adentro de la cueva");
+            ConteoDePlantas.text = "4 / 4";
+            CuboP.SetActive(true);
+            PlantasNumeros.SetActive(false);
         }
     }
+
+    public void pensamientoB()
+    {
+        Cuadropensamiento.SetActive(true);
+        cuadroObjetivo.SetActive(false);
+        Pensamientos.text = "*Cuatro plantas no alcanzaran para los enfermos, deberia de buscar una más*";
+        PensamientosBotones.text = "Presiona L para continuar";
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            Cuadropensamiento.SetActive(false);
+            cuadroObjetivo.SetActive(true);
+
+
+            Destroy(CuboP);
+            Objetivos.text = "Investiga la cueva";
+            PlantasNumeros.SetActive(true);
+        }
+    }
+
+    public void cuevaEntrada()
+    {
+        if(NumeroHierbas == 4)
+        {
+            Cuadropensamiento.SetActive(true);
+            Pensamientos.text = "Presiona F para entrar";
+            PensamientosBotones.text = "";
+        }
+        if (NumeroHierbas <= 3)
+        {
+            Cuadropensamiento.SetActive(true);
+            Pensamientos.text = ("*Deberia buscar primero en el bosque antes de entrar*");
+            PensamientosBotones.text = "";
+        }
+
+
+    }
+
+    public void cuevaSalida()
+    {
+        Cuadropensamiento.SetActive(false);
+        
+    }
+
+
 
     void Recoletar1()
     {
@@ -78,10 +156,11 @@ public class Recoleccion : MonoBehaviour
         {
             Destroy(hierbas1);
             Destroy(cuadroTrigger1);
+            Destroy(particula1);
 
             numeroH();
-            Debug.Log("Has recogido " + NumeroHierbas);
-            desactivarLuzciernaga();
+            //Debug.Log("Has recogido " + NumeroHierbas);
+
         }
     }
 
@@ -92,11 +171,12 @@ public class Recoleccion : MonoBehaviour
         {
             Destroy(hierbas2);
             Destroy(cuadroTrigger2);
+            Destroy(particula2);
 
             numeroH();
-            Debug.Log("Has recogido "+ NumeroHierbas);
+            //Debug.Log("Has recogido "+ NumeroHierbas);
 
-            desactivarLuzciernaga2();
+
         }
 
     }
@@ -107,11 +187,12 @@ public class Recoleccion : MonoBehaviour
         {
             Destroy(hierbas3);
             Destroy(cuadroTrigger3);
+            Destroy(particula3);
 
             numeroH();
-            Debug.Log("Has recogido " + NumeroHierbas);
+            //Debug.Log("Has recogido " + NumeroHierbas);
 
-            //desactivarLuzciernaga2();
+
         }
 
     }
@@ -121,11 +202,12 @@ public class Recoleccion : MonoBehaviour
         {
             Destroy(hierbas4);
             Destroy(cuadroTrigger4);
+            Destroy(particula4);
 
             numeroH();
-            Debug.Log("Has recogido " + NumeroHierbas);
+            //Debug.Log("Has recogido " + NumeroHierbas);
 
-            //desactivarLuzciernaga2();
+
         }
 
     }
@@ -133,19 +215,12 @@ public class Recoleccion : MonoBehaviour
 
     void MensajeRecolectar()
     {
-        Debug.Log("Recolectar con F");
+        //Debug.Log("Recolectar con F");
+        Objetivos.text = "Recolectar planta con F";
     }
 
-    public void mensajes()
-    {
-        Debug.Log("Debes de recolectar 5 hierbas medicinales");
-        destruirMensaje();
-    }
 
-    void destruirMensaje()
-    {
-        Destroy(cuadroMensaje);
-    }
+
 
 
 
@@ -154,25 +229,7 @@ public class Recoleccion : MonoBehaviour
         enemigo.SetActive(true);
     }
 
-    void activarLuzciernaga()
-    {
-        particula1.SetActive(true);
-    }
 
-    void desactivarLuzciernaga()
-    {
-        particula1.SetActive(false);
-    }
-
-    void activarLuzciernaga2()
-    {
-        particula2.SetActive(true);
-    }
-
-    void desactivarLuzciernaga2()
-    {
-        particula2.SetActive(false);
-    }
 
 
 
