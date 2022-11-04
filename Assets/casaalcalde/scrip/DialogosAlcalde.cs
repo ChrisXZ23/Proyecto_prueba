@@ -14,6 +14,7 @@ public class DialogosAlcalde : MonoBehaviour
     public GameObject AlcaldeF1;
     public GameObject AlcaldeF2;
     public GameObject AplicarLacura;
+    public GameObject Portal;
 
     public void Alcalde()
     {
@@ -43,6 +44,7 @@ public class DialogosAlcalde : MonoBehaviour
         {
             Destroy(AlcaldeF2);
             Destroy(AplicarLacura);
+            Portal.SetActive(true);
         }
     }
 
