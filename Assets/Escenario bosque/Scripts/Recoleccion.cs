@@ -28,9 +28,13 @@ public class Recoleccion : MonoBehaviour
     public Text PensamientosBotones;
     public Text Objetivos;
     public GameObject Cuadropensamiento;
-    public GameObject CuboP;
+    
     public GameObject cuadroObjetivo;
     public GameObject cuboB;
+
+    public GameObject CuboP;
+    public Transform pointSpawn;
+    public GameObject cuboPs;
 
     public GameObject entradaCueva;
     //public Transform TransformPlayer;
@@ -102,11 +106,16 @@ public class Recoleccion : MonoBehaviour
             ConteoDePlantas.text = "4 / 4";
             CuboP.SetActive(true);
             PlantasNumeros.SetActive(false);
+
+            CuboP.transform.position = pointSpawn.position;
+
+
         }
     }
 
     public void pensamientoB()
     {
+        
         Cuadropensamiento.SetActive(true);
         cuadroObjetivo.SetActive(false);
         Pensamientos.text = "*Cuatro plantas no alcanzaran para los enfermos, deberia de buscar una más*";
@@ -121,8 +130,21 @@ public class Recoleccion : MonoBehaviour
             Destroy(CuboP);
             Objetivos.text = "Investiga la cueva";
             PlantasNumeros.SetActive(true);
+            cuboPs.SetActive(true);
+            cuboPs.transform.position = pointSpawn.position;
+
+
         }
     }
+
+    public void borrarcuboPs()
+    {
+
+        Destroy(cuboPs);
+
+    }
+
+
 
     public void cuevaEntrada()
     {
