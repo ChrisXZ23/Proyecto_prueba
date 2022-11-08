@@ -37,6 +37,9 @@ public class Recoleccion : MonoBehaviour
     public GameObject cuboPs;
 
     public GameObject entradaCueva;
+
+    public GameObject CameraP;
+    public GameObject CameraCueva;
     //public Transform TransformPlayer;
     public GameObject enemigo;
 
@@ -111,6 +114,7 @@ public class Recoleccion : MonoBehaviour
             ConteoDePlantas.text = "4 / 4";
             CuboP.SetActive(true);
             PlantasNumeros.SetActive(false);
+            
 
             CuboP.transform.position = pointSpawn.position;
             
@@ -121,7 +125,8 @@ public class Recoleccion : MonoBehaviour
     
     public void pensamientoB()  //Cuadro de pensamiento de bertran
     {
-        
+        CameraP.SetActive(false);
+        CameraCueva.SetActive(true);
         Cuadropensamiento.SetActive(true);
         cuadroObjetivo.SetActive(false);
         Pensamientos.text = "*Cuatro plantas no alcanzaran para los enfermos, deberia de buscar una más*";
@@ -141,6 +146,9 @@ public class Recoleccion : MonoBehaviour
             cuboPs.SetActive(true);
             cuboPs.transform.position = pointSpawn.position;
 
+            CameraP.SetActive(true);
+            Destroy(CameraCueva);
+
 
         }
     }
@@ -149,9 +157,13 @@ public class Recoleccion : MonoBehaviour
     public void pensamientoB2()  //Es por si se presiona Shift y sale del cubo de pensamientoB
     {
 
+        CameraP.SetActive(false);
+        CameraCueva.SetActive(true);
 
+        CameraP.SetActive(true);
+        Destroy(CameraCueva);
 
-            Cuadropensamiento.SetActive(false);
+        Cuadropensamiento.SetActive(false);
             cuadroObjetivo.SetActive(true);
 
 
