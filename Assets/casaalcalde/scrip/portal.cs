@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class portal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        other.transform.position = new Vector3(-9.789f, 0.08f, -7.764f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

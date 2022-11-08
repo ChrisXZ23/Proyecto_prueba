@@ -72,8 +72,9 @@ public class DialogosAlcalde : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            Destroy(siguiente);
             Charla.SetActive(false);
+            MensajesUI.text = "Bien con eso bastara";
+            Destroy(siguiente);
         }
     }
            
