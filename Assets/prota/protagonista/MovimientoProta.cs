@@ -71,7 +71,7 @@ public class MovimientoProta : MonoBehaviour
 
     public void noMovimiento()
     {
-        if (velocidad == 0.2f)
+        if (velocidad >= 0.02f)
         {
             //Debug.Log("No hay movimiento");
             velocidad = 0;
@@ -84,7 +84,7 @@ public class MovimientoProta : MonoBehaviour
         if (velocidad == 0)
         {
             //Debug.Log("Hay movimiento");
-            velocidad = 0.2f;
+            velocidad = 0.025f;
 
             transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
         }
