@@ -67,8 +67,11 @@ public class Protagonista : MovimientoProta
         {
             StaminaVmas();
         }
+        
 
     }
+
+
 
     void StaminaVmas()
     {

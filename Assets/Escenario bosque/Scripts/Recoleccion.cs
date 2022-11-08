@@ -53,8 +53,10 @@ public class Recoleccion : MonoBehaviour
     }
     public void BmensajeBienvenida()
     {
-        Destroy(cuboB);
-        Destroy(mensajeB);
+        //Destroy(cuboB);
+        //Destroy(mensajeB);
+        cuboB.SetActive(false);
+        MensajeInicio.SetActive(false);
     }
 
 
@@ -89,16 +91,19 @@ public class Recoleccion : MonoBehaviour
         {
             //Debug.Log("Aún queda más planta");
             ConteoDePlantas.text = "1 / 4";
+          
         }
         if (NumeroHierbas == 2)
         {
             //Debug.Log("Aún queda más planta");
             ConteoDePlantas.text = "2 / 4";
+          
         }
         if (NumeroHierbas == 3)
         {
             //Debug.Log("Aún queda más planta");
             ConteoDePlantas.text = "3 / 4";
+           
         }
         if (NumeroHierbas == 4)
         {
@@ -108,18 +113,20 @@ public class Recoleccion : MonoBehaviour
             PlantasNumeros.SetActive(false);
 
             CuboP.transform.position = pointSpawn.position;
+            
 
 
         }
     }
-
-    public void pensamientoB()
+    
+    public void pensamientoB()  //Cuadro de pensamiento de bertran
     {
         
         Cuadropensamiento.SetActive(true);
         cuadroObjetivo.SetActive(false);
         Pensamientos.text = "*Cuatro plantas no alcanzaran para los enfermos, deberia de buscar una más*";
         PensamientosBotones.text = "Presiona L para continuar";
+        
 
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -128,6 +135,7 @@ public class Recoleccion : MonoBehaviour
 
 
             Destroy(CuboP);
+            ConteoDePlantas.text = "4 / 5";
             Objetivos.text = "Investiga la cueva";
             PlantasNumeros.SetActive(true);
             cuboPs.SetActive(true);
@@ -137,11 +145,37 @@ public class Recoleccion : MonoBehaviour
         }
     }
 
+    
+    public void pensamientoB2()  //Es por si se presiona Shift y sale del cubo de pensamientoB
+    {
+
+
+
+            Cuadropensamiento.SetActive(false);
+            cuadroObjetivo.SetActive(true);
+
+
+            Destroy(CuboP);
+            ConteoDePlantas.text = "4 / 5";
+            Objetivos.text = "Investiga la cueva";
+            PlantasNumeros.SetActive(true);
+            cuboPs.SetActive(true);
+            cuboPs.transform.position = pointSpawn.position;
+
+
+
+    }
+
     public void borrarcuboPs()
     {
 
         Destroy(cuboPs);
 
+    }
+
+    public void objetivosB()
+    {
+        Objetivos.text = "";
     }
 
 
@@ -180,6 +214,8 @@ public class Recoleccion : MonoBehaviour
             Destroy(cuadroTrigger1);
             Destroy(particula1);
 
+            
+
             numeroH();
             //Debug.Log("Has recogido " + NumeroHierbas);
 
@@ -194,6 +230,8 @@ public class Recoleccion : MonoBehaviour
             Destroy(hierbas2);
             Destroy(cuadroTrigger2);
             Destroy(particula2);
+
+            
 
             numeroH();
             //Debug.Log("Has recogido "+ NumeroHierbas);
@@ -211,6 +249,8 @@ public class Recoleccion : MonoBehaviour
             Destroy(cuadroTrigger3);
             Destroy(particula3);
 
+            
+
             numeroH();
             //Debug.Log("Has recogido " + NumeroHierbas);
 
@@ -225,6 +265,8 @@ public class Recoleccion : MonoBehaviour
             Destroy(hierbas4);
             Destroy(cuadroTrigger4);
             Destroy(particula4);
+
+            
 
             numeroH();
             //Debug.Log("Has recogido " + NumeroHierbas);

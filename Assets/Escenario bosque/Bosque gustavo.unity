@@ -3410,7 +3410,19 @@ MonoBehaviour:
         m_CallState: 2
   TriggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1010766849}
+        m_TargetAssemblyTypeName: Recoleccion, Assembly-CSharp
+        m_MethodName: objetivosB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &271187895
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5045,13 +5057,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: TriggerExit.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: TriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: TriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1010766849}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -5065,8 +5089,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 800177932}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: TriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: TriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: pensamientoB2
       objectReference: {fileID: 0}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5078,11 +5110,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: noMovimiento
+      value: quietoP
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: TriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Recoleccion, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: MovimientoProta, Assembly-CSharp
+      value: Protagonista, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: TriggerExit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6414363297123298164, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -5094,6 +5134,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6414363297123298165, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6414363297123298166, guid: 364ca67d1ad6eb0418b6124074c68439, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8409,6 +8453,10 @@ PrefabInstance:
     - target: {fileID: 2427305461053298523, guid: 4bfa07a8e9b497646b10a359a2aaedba, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2462723585968695408, guid: 4bfa07a8e9b497646b10a359a2aaedba, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -59.8
       objectReference: {fileID: 0}
     - target: {fileID: 4263711268807371334, guid: 4bfa07a8e9b497646b10a359a2aaedba, type: 3}
       propertyPath: m_Enabled
@@ -15579,7 +15627,19 @@ MonoBehaviour:
         m_CallState: 2
   TriggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1010766849}
+        m_TargetAssemblyTypeName: Recoleccion, Assembly-CSharp
+        m_MethodName: objetivosB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1315765036
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18054,7 +18114,19 @@ MonoBehaviour:
         m_CallState: 2
   TriggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1010766849}
+        m_TargetAssemblyTypeName: Recoleccion, Assembly-CSharp
+        m_MethodName: objetivosB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1518025422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20666,7 +20738,19 @@ MonoBehaviour:
         m_CallState: 2
   TriggerExit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1010766849}
+        m_TargetAssemblyTypeName: Recoleccion, Assembly-CSharp
+        m_MethodName: objetivosB
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1762513154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26419,6 +26503,10 @@ PrefabInstance:
       propertyPath: TriggerEnter.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: sMovimiento
       objectReference: {fileID: 0}
+    - target: {fileID: 5715719487134267128, guid: 44bd7f93bb086f74db4c0355f853a3de, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6841178535831704175, guid: 44bd7f93bb086f74db4c0355f853a3de, type: 3}
       propertyPath: m_RootOrder
       value: 28
@@ -26433,7 +26521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6841178535831704175, guid: 44bd7f93bb086f74db4c0355f853a3de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 92.67
+      value: 89.59
       objectReference: {fileID: 0}
     - target: {fileID: 6841178535831704175, guid: 44bd7f93bb086f74db4c0355f853a3de, type: 3}
       propertyPath: m_LocalRotation.w
