@@ -9,8 +9,9 @@ public class Almanaque : mensajes
     public GameObject Aviso;
     public GameObject NewMensaje;
     public GameObject TodoAlmanaque;
+    public GameObject CuboAplicar;
 
-   public void Pagina()
+    public void Pagina()
     {
         Pagina1.SetActive(true);
 
@@ -48,6 +49,7 @@ public class Almanaque : mensajes
         if (Input.GetKeyDown(KeyCode.G))
         {
             TodoAlmanaque.SetActive(true);
+            CuboAplicar.SetActive(true);
         }
     }
 }
