@@ -15,6 +15,9 @@ public class DialogosAlcalde : MonoBehaviour
     public GameObject AlcaldeF2;
     public GameObject AplicarLacura;
     public GameObject Portal;
+    public GameObject AlcaldeSecuandario;
+    public GameObject Alcaldeinicial;
+    public GameObject CuboFinal;
 
     public void Alcalde()
     {
@@ -45,6 +48,9 @@ public class DialogosAlcalde : MonoBehaviour
             Destroy(AlcaldeF2);
             Destroy(AplicarLacura);
             Portal.SetActive(true);
+            AlcaldeSecuandario.SetActive(true);
+            Alcaldeinicial.SetActive(true);
+            CuboFinal.SetActive(true);
         }
     }
 

@@ -65,4 +65,9 @@ public class Botones : MonoBehaviour
         SceneManager.LoadScene(6);
     }
 
+    public void regresoFinal()
+    {
+        SceneManager.LoadScene(0);
+    }
+
 }

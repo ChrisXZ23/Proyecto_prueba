@@ -11,24 +11,50 @@ public class DialogosFinales : MonoBehaviour
     public GameObject Caja1;
     public GameObject Caja2;
     public GameObject Caja3;
-
-    public void Detalles()
-    {
-        AlcaldeBase1.SetActive(false);
-    }
+    public GameObject Caja4;
 
     public void Final1()
     {
+        MensajesUI.text = "okey, con eso sera suficiente";
         Charlafinal.SetActive(true);
-        Destroy(Caja1);
-        Caja2.SetActive(true);
+        AlcaldeBase1.SetActive(false);
+    }
+
+    public void FinalSeguido()
+    {
+        if(Input.GetKeyDown(KeyCode.L))
+        {
+            MensajesUI.text = "Yo lo cuidare hasta que se mejore";
+            Destroy(Caja1);
+            Caja2.SetActive(true);
+        }
     }
 
     public void Final2()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            MensajesUI.text = "Yo lo cuidare hasta que se mejore";
+            MensajesUI.text = "Haz trabajado mucho, deberias ir a descansar";
+            Destroy(Caja2);
+            Caja3.SetActive(true);
+        }
+    }
+
+    public void Final3()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            MensajesUI.text = "Ah casi se me olvida, ve al centro de la aldea mañana";
+            Destroy(Caja3);
+            Caja4.SetActive(true);
+        }
+    }
+
+    public void Final4()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            MensajesUI.text = "Tengo una tarea muy importante para ti";
         }
     }
 }
