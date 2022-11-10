@@ -19,8 +19,8 @@ public class PrimerosMensajes : mensajes
         {
             Destroy(Principal);
             Variablemensaje.SetActive(true);
-            MensajesUI.text = "Agarra el saco con el boton F";
-            Invoke("ResetearTexto", 1f);
+            MensajesUI.text = "Sal de la casa, usa el boton F para interactuar";
+            Invoke("ResetearTexto", 3f);
             Principal.SetActive(false);
         }
     }
