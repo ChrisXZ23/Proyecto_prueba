@@ -12,6 +12,9 @@ public class MovimientoOso : MonoBehaviour
     public NavMeshAgent EnemyNaveMesh;
     public Transform TransformPointer;
     public Animator animacion;
+
+    
+
     void Start()
     {
 
@@ -20,31 +23,32 @@ public class MovimientoOso : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(transform.position, TransformPointer.position);
+        
 
-        if (dist <= 25)
+        if (dist >= 13)
         {
             SeguirMesh();
             animacion.SetBool("run", true);
 
         }
-        else
+
+        if(dist <= 12)
         {
-            animacion.SetBool("run", false);
+            animacion.SetBool("walk", true);
         }
 
-        if (dist < 8)
-        {
-            animacion.SetBool("run", false);
 
-        }
-        if (dist <= 8)
+        if (dist <= 7)
         {
             animacion.SetBool("ataque", true);
+            animacion.SetBool("run", false);
+
 
         }
         if (dist >= 8)
         {
             animacion.SetBool("ataque", false);
+            
         }
 
     }
@@ -54,11 +58,7 @@ public class MovimientoOso : MonoBehaviour
         EnemyNaveMesh.destination = pointer.transform.position;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.transform.tag == "Player")
-        {
+ 
 
-        }
-    }
+
 }

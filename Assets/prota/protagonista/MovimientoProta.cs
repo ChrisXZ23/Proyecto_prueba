@@ -62,7 +62,7 @@ public class MovimientoProta : MonoBehaviour
             if (Input.GetKey("left shift"))
             {
                 contadorStamina--;
-                transform.Translate(Input.GetAxis("Horizontal") * velocidad * 0.001f, 0, Input.GetAxis("Vertical") * velocidad * 0.001f);
+                transform.Translate(Input.GetAxis("Horizontal") * velocidad * 0.01f, 0, Input.GetAxis("Vertical") * velocidad * 0.01f);
             }
         }
     }

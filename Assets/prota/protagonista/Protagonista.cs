@@ -97,7 +97,7 @@ public class Protagonista : MovimientoProta
         Stamina.fillAmount = vStamina / 100;
         if (Input.GetKey("left shift"))
         {
-            vStamina--;
+            vStamina-=0.1f;
             
         }
         if (vStamina <= 0)
@@ -113,12 +113,12 @@ public class Protagonista : MovimientoProta
 
     void velocidadRS()
     {
-        if (vStamina >= 21)
+        if (vStamina >= 11)
         {
             velocidadT();
             animator.SetBool(isrunningHash, true);
         }
-        if (vStamina <= 20)
+        if (vStamina <= 10)
         {
             VelocidadmenosT();
             animator.SetBool(isrunningHash, false);
