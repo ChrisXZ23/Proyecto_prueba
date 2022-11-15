@@ -15,7 +15,7 @@ public class DialogosFinales : MonoBehaviour
 
     public void Final1()
     {
-        MensajesUI.text = "okey, con eso sera suficiente";
+        MensajesUI.text = "okey, con eso será suficiente";
         Charlafinal.SetActive(true);
         AlcaldeBase1.SetActive(false);
     }
@@ -24,7 +24,7 @@ public class DialogosFinales : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.L))
         {
-            MensajesUI.text = "Yo lo cuidare hasta que se mejore";
+            MensajesUI.text = "Yo lo cuidaré hasta que se mejore";
             Destroy(Caja1);
             Caja2.SetActive(true);
         }
@@ -34,7 +34,7 @@ public class DialogosFinales : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            MensajesUI.text = "Haz trabajado mucho, deberias ir a descansar";
+            MensajesUI.text = "Haz trabajado mucho, deberías ir a descansar";
             Destroy(Caja2);
             Caja3.SetActive(true);
         }
@@ -44,7 +44,7 @@ public class DialogosFinales : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            MensajesUI.text = "Ah casi se me olvida, ve al centro de la aldea mañana";
+            MensajesUI.text = "¡Ah! casi se me olvida, ve al centro de la aldea mañana";
             Destroy(Caja3);
             Caja4.SetActive(true);
         }

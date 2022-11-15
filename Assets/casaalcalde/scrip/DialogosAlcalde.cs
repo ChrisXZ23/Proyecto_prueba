@@ -48,17 +48,22 @@ public class DialogosAlcalde : MonoBehaviour
             Destroy(AlcaldeF2);
             Destroy(AplicarLacura);
             Portal.SetActive(true);
-            AlcaldeSecuandario.SetActive(true);
-            Alcaldeinicial.SetActive(true);
+            Invoke("retrasoAlcalde", 0.5f);
+            Alcaldeinicial.SetActive(false);
             CuboFinal.SetActive(true);
         }
+    }
+
+    public void retrasoAlcalde()
+    {
+        AlcaldeSecuandario.SetActive(true);
     }
 
     public void Alcalde1()
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            MensajesUI.text = "Rapido aplicale la medicina al compañero";
+            MensajesUI.text = "Rápido aplicale la medicina al compañero";
             Destroy(Box2);
             Box3.SetActive(true);
         }
