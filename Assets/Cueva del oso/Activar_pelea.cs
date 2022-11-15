@@ -113,7 +113,7 @@ public class Activar_pelea : MonoBehaviour
         DialogoPensamiento2.text = "";
         CuadroObjetivo.SetActive(false);
 
-        SceneManager.LoadScene(5);
+        SceneManager.LoadScene(7);
     }
 
     public void noSalida2()
