@@ -34,12 +34,14 @@ public class MovimientoOso : MonoBehaviour
 
         if(dist <= 12)
         {
+            SeguirMesh();
             animacion.SetBool("walk", true);
         }
 
 
         if (dist <= 7)
         {
+            SeguirMesh();
             animacion.SetBool("ataque", true);
             animacion.SetBool("run", false);
 
@@ -47,6 +49,7 @@ public class MovimientoOso : MonoBehaviour
         }
         if (dist >= 8)
         {
+            SeguirMesh();
             animacion.SetBool("ataque", false);
             
         }
