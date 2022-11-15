@@ -23,7 +23,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/intefez/gracias.unity
     guid: 71f21a8021015394d9dd53337d64b12c
-  - enabled: 1
-    path: Assets/intefez/Despues del bosque.unity
-    guid: 44a07a2e43581424490c737d90a29b00
   m_configObjects: {}
