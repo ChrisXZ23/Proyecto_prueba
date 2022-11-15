@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Protagonista : MovimientoProta
 {
@@ -11,6 +12,9 @@ public class Protagonista : MovimientoProta
 
     public Image Stamina;
     [SerializeField] private float vStamina;
+
+    public Image hpPlayer;
+    [SerializeField] private float vidaP;
 
 
     // Start is called before the first frame update
@@ -124,6 +128,23 @@ public class Protagonista : MovimientoProta
             animator.SetBool(isrunningHash, false);
         }
     }
+
+
+    public void vidaPlayer()
+    {
+        hpPlayer.fillAmount = vidaP / 100;
+
+        vidaP -= 8;
+
+        if(vidaP == 0)
+        {
+            SceneManager.LoadScene(6);
+        }
+        
+
+    }
+
+
 
 
 }

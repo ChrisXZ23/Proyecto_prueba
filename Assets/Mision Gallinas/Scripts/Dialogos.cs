@@ -58,7 +58,7 @@ public class Dialogos : MonoBehaviour
     public void mensaje2()
     {
         //Debug.Log("Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rapidas  -presiona F para continuar");
-        dialogosUI.text = "Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rapidas";
+        dialogosUI.text = "Mis gallinas se escaparon del gallinero y no puedo agarrarlas ya que son muy rápidas";
         dialogosintUI.text = "presiona L para continuar";
         CuadroD.SetActive(true);
 
@@ -76,7 +76,7 @@ public class Dialogos : MonoBehaviour
     public void mensaje3()
     {
         //Debug.Log("¿Me ayudarias a atraparlas y ponerlas en el gallinero?  -presiona F para continuar");
-        dialogosUI.text = "¿Me ayudarias a atraparlas y ponerlas en el gallinero?";
+        dialogosUI.text = "¿Me ayudarías a atraparlas y ponerlas en el gallinero?";
         dialogosintUI.text = "presiona L para continuar";
         CuadroD.SetActive(true);
 

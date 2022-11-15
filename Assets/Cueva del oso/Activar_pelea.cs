@@ -16,6 +16,7 @@ public class Activar_pelea : MonoBehaviour
     public GameObject Mcueva;
     public GameObject plantaF;
     public GameObject RecoF;
+    public GameObject RecoF2;
     public GameObject activarDialogosc;
     public GameObject DialogoCueva;
     public Text DialogoPensamiento;
@@ -65,6 +66,7 @@ public class Activar_pelea : MonoBehaviour
             CuadroObjetivo.SetActive(false);
             camaraD.SetActive(true);
             camaraP.SetActive(false);
+            RecoF2.SetActive(true);
         }
     }
 
@@ -72,6 +74,7 @@ public class Activar_pelea : MonoBehaviour
     {
         DialogoPensamiento.text = "*Con esta planta bastara para la medicina para los enfermos*";
         DialogoPensamiento2.text = "Presiona L para continuar";
+        
 
         if (Input.GetKeyDown(KeyCode.L))
         {
@@ -79,13 +82,14 @@ public class Activar_pelea : MonoBehaviour
             oso.SetActive(true);
             DialogoCueva.SetActive(false);
             CuadroObjetivo.SetActive(true);
-            Objetivos.text = "Mata al oso";
+            Objetivos.text = "Derrota al oso";
 
             sonidoCueva.SetActive(false);
             musicaPelea.SetActive(true);
 
             Destroy(camaraD);
             camaraP.SetActive(true);
+            Destroy(RecoF2);
         }
 
 
@@ -98,7 +102,7 @@ public class Activar_pelea : MonoBehaviour
         oso.SetActive(true);
         DialogoCueva.SetActive(false);
         CuadroObjetivo.SetActive(true);
-        Objetivos.text = "Mata al oso";
+        Objetivos.text = "Derrota al oso";
 
         sonidoCueva.SetActive(false);
         musicaPelea.SetActive(true);
@@ -113,7 +117,7 @@ public class Activar_pelea : MonoBehaviour
         DialogoPensamiento2.text = "";
         CuadroObjetivo.SetActive(false);
 
-        SceneManager.LoadScene(7);
+        //SceneManager.LoadScene(7);
     }
 
     public void noSalida2()
