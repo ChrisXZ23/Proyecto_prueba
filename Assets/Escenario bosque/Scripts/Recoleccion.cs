@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Recoleccion : MonoBehaviour
 {
@@ -199,6 +200,12 @@ public class Recoleccion : MonoBehaviour
             Cuadropensamiento.SetActive(true);
             Pensamientos.text = "Presiona F para entrar";
             PensamientosBotones.text = "";
+
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                SceneManager.LoadScene(6);
+            }
+
         }
         if (NumeroHierbas <= 3)
         {
