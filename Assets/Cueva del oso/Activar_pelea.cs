@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Activar_pelea : MonoBehaviour
 {
@@ -111,6 +112,8 @@ public class Activar_pelea : MonoBehaviour
         DialogoPensamiento.text = "Debes de buscar la ultima planta";
         DialogoPensamiento2.text = "";
         CuadroObjetivo.SetActive(false);
+
+        SceneManager.LoadScene(5);
     }
 
     public void noSalida2()
