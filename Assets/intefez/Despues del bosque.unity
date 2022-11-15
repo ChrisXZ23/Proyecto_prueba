@@ -586,7 +586,7 @@ RectTransform:
   m_GameObject: {fileID: 1464998020}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.87727, y: 0.87727, z: 0.87727}
+  m_LocalScale: {x: 1.067199, y: 1.067199, z: 1.067199}
   m_Children: []
   m_Father: {fileID: 1459099288}
   m_RootOrder: 0
@@ -629,7 +629,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Despues de recolectar las hierbas, Beltram fue directo a la casa del alcalde.
+  m_Text: "Despu\xE9s de recolectar las hierbas, Beltram fue directo a la casa del
+    alcalde."
 --- !u!222 &1464998023
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -666,14 +667,14 @@ RectTransform:
   m_GameObject: {fileID: 1496595378}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.87727, y: 0.87727, z: 0.87727}
+  m_LocalScale: {x: 1.1353627, y: 1.1353627, z: 1.1353627}
   m_Children: []
   m_Father: {fileID: 1459099288}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 275.46277, y: -207.0357}
+  m_AnchoredPosition: {x: 251.9, y: -207.04}
   m_SizeDelta: {x: 305.7082, y: 41.3145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1496595380

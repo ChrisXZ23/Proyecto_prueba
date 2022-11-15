@@ -2064,6 +2064,10 @@ PrefabInstance:
       propertyPath: Stamina
       value: 
       objectReference: {fileID: 1129040468}
+    - target: {fileID: 7128590872345740268, guid: 40b514ba863898a47a69ed3dd05b45b2, type: 3}
+      propertyPath: velocidad
+      value: 0.03
+      objectReference: {fileID: 0}
     - target: {fileID: 7938929633844358338, guid: 40b514ba863898a47a69ed3dd05b45b2, type: 3}
       propertyPath: m_TagString
       value: Player
