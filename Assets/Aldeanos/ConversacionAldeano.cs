@@ -22,6 +22,9 @@ public class ConversacionAldeano : MonoBehaviour
 
     public GameObject DesactivarAldeano;
     public GameObject aldeanoMisiones;
+    public GameObject activarAldeano2;
+    public GameObject aldeanoCasaAlcalde;
+    public GameObject Alcalde;
 
     // Start is called before the first frame update
     void Start()
@@ -150,6 +153,15 @@ public class ConversacionAldeano : MonoBehaviour
     public void DesactivarDesactiv()
     {
         DesactivarAldeano.SetActive(false);
+    }
+    public void ActivarAlcalde()
+    {
+        activarAldeano2.SetActive(true);
+        Alcalde.SetActive(true);
+    }
+    public void DesactivarAlcalde()
+    {
+        aldeanoCasaAlcalde.SetActive(false);
     }
 }
 
