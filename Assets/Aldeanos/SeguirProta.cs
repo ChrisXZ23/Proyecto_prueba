@@ -36,9 +36,9 @@ public class SeguirProta : MonoBehaviour
         }
         if (dist <= 14)
         {
-            CuadroD.SetActive(true);
-            dialogosUI.text = "HEY! te he estado buscando";
-            dialogosintUI.text = " ";
+            //CuadroD.SetActive(true);
+            //dialogosUI.text = "HEY! te he estado buscando";
+           // dialogosintUI.text = " ";
             SeguirLerp();
             LookAtPlayer();
             animacion.SetBool("run", true);
@@ -51,7 +51,7 @@ public class SeguirProta : MonoBehaviour
         {
             speed = 0;
             animacion.SetBool("run", false);
-            CuadroD.SetActive(false);
+            //CuadroD.SetActive(false);
 
         }
         else
