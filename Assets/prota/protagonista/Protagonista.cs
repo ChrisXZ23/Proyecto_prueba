@@ -15,6 +15,8 @@ public class Protagonista : MovimientoProta
 
     public Image hpPlayer;
     [SerializeField] private float vidaP;
+    public GameObject quietoOver;
+    [SerializeField] private GameObject PointP;
 
 
     // Start is called before the first frame update
@@ -135,12 +137,42 @@ public class Protagonista : MovimientoProta
         hpPlayer.fillAmount = vidaP / 100;
 
         vidaP -= 8;
+        animator.SetBool("help", true);
+ 
 
-        if(vidaP == 0)
+        if (vidaP <= 0)
         {
+            vidaP = 0;
             SceneManager.LoadScene(6);
         }
+
+        if(vidaP <= 10)
+        {
+            animator.SetBool("deathP", true);
+            quietoOver.transform.position = PointP.transform.position;
+        }
         
+
+    }
+
+    public void golpeP()
+    {
+        animator.SetBool("help", false);
+    }
+
+    public void ataqueP()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetBool("attack", true);
+
+            if (Input.GetMouseButton(0))
+            {
+                animator.SetBool("attack", false);
+
+            }
+
+        }
 
     }
 

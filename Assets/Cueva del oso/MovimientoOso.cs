@@ -19,8 +19,10 @@ public class MovimientoOso : MonoBehaviour
     public GameObject ataque1;
     public GameObject ataque2;
     public GameObject GameOver;
+
+    public GameObject fondoHP;
     public Image hpEnemy;
-    [SerializeField] private float vidaEnemy = 100;
+    [SerializeField] private float vidaEnemy;
 
 
 
@@ -34,9 +36,10 @@ public class MovimientoOso : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(transform.position, TransformPointer.position);
-        
 
-        if (dist >= 13)
+        vidaosoMenos();
+
+        if (dist <= 16)
         {
             SeguirMesh();
             animacion.SetBool("run", true);
@@ -44,25 +47,25 @@ public class MovimientoOso : MonoBehaviour
 
         }
 
-        if(dist <= 12)
+        if(dist <= 7)
         {
-            SeguirMesh();
+            
             animacion.SetBool("walk", true);
         }
 
 
-        if (dist <= 7)
+        if (dist <= 5)
         {
-            SeguirMesh();
+            
             animacion.SetBool("ataque", true);
             animacion.SetBool("run", false);
             GameOver.SetActive(true);
 
 
         }
-        if (dist >= 8)
+        if (dist >= 6)
         {
-            SeguirMesh();
+            
             animacion.SetBool("ataque", false);
             GameOver.SetActive(false);
             
@@ -78,8 +81,10 @@ public class MovimientoOso : MonoBehaviour
     public void vidaOso1()
     {
         hpEnemy.fillAmount = vidaEnemy / 100;
+
         if (Input.GetMouseButtonDown(0))
         {
+            
             vidaEnemy -= 10;
             ataque1.SetActive(false);
             ataque2.SetActive(true);
@@ -90,8 +95,10 @@ public class MovimientoOso : MonoBehaviour
     public void vidaOso2()
     {
         hpEnemy.fillAmount = vidaEnemy / 100;
+
         if (Input.GetMouseButtonDown(0))
         {
+            
             vidaEnemy -= 10;
             ataque2.SetActive(false);
             ataque1.SetActive(true);
@@ -101,7 +108,7 @@ public class MovimientoOso : MonoBehaviour
 
     public void gameOver()
     {
-        SceneManager.LoadScene(6);
+        //SceneManager.LoadScene(6);
         
     }
 
@@ -110,9 +117,14 @@ public class MovimientoOso : MonoBehaviour
     {
         if(vidaEnemy == 0)
         {
-            Destroy(ataque1);
-            Destroy(ataque2);
-            Destroy(GameOver);
+            //Destroy(ataque1);
+            ataque1.SetActive(false);
+            //Destroy(ataque2);
+            ataque2.SetActive(false);
+            //Destroy(GameOver);
+            fondoHP.SetActive(false);
+
+            animacion.SetBool("death", true);
         }
     }
 
