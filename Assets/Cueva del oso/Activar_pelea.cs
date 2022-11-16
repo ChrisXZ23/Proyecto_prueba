@@ -12,8 +12,12 @@ public class Activar_pelea : MonoBehaviour
     public GameObject camaraD;
     public GameObject camaraP;
     public GameObject BloqueoEntrada;
+    public GameObject salidaC;
     public GameObject bCueva;
     public GameObject Mcueva;
+    public GameObject contadorPlantas;
+    public Text contadorPlantasT;
+    public int contadorPlantasN;
     public GameObject plantaF;
     public GameObject RecoF;
     public GameObject RecoF2;
@@ -42,6 +46,8 @@ public class Activar_pelea : MonoBehaviour
     {
         CuadroObjetivo.SetActive(true);
         Mcueva.SetActive(true);
+        contadorPlantas.SetActive(true);
+        contadorPlantasT.text = "4 / 5";
         Objetivos.text = "Busca la planta restante";
     }
 
@@ -67,12 +73,17 @@ public class Activar_pelea : MonoBehaviour
             camaraD.SetActive(true);
             camaraP.SetActive(false);
             RecoF2.SetActive(true);
+            salidaC.SetActive(false);
+
+            contadorPlantasN += 1;
+            contadorPlantasT.text = "5 / 5";
+            contadorPlantas.SetActive(false);
         }
     }
 
     public void activarDialogos()
     {
-        DialogoPensamiento.text = "*Con esta planta bastara para la medicina para los enfermos*";
+        DialogoPensamiento.text = "*Con esta planta bastará para hacer la medicina, debería de volver con el alcalde*";
         DialogoPensamiento2.text = "Presiona L para continuar";
         
 
@@ -82,7 +93,7 @@ public class Activar_pelea : MonoBehaviour
             oso.SetActive(true);
             DialogoCueva.SetActive(false);
             CuadroObjetivo.SetActive(true);
-            Objetivos.text = "Derrota al oso";
+            Objetivos.text = "Derrota al oso para salir de la cueva  -presiona click izquierdo para atacar";
 
             sonidoCueva.SetActive(false);
             musicaPelea.SetActive(true);
@@ -90,6 +101,8 @@ public class Activar_pelea : MonoBehaviour
             Destroy(camaraD);
             camaraP.SetActive(true);
             Destroy(RecoF2);
+
+            contadorPlantas.SetActive(true);
         }
 
 
@@ -112,12 +125,27 @@ public class Activar_pelea : MonoBehaviour
 
     public void noSalida()
     {
-        DialogoCueva.SetActive(true);
-        DialogoPensamiento.text = "Debes de buscar la ultima planta";
-        DialogoPensamiento2.text = "";
-        CuadroObjetivo.SetActive(false);
+        if (contadorPlantasN == 0)
+        {
+            DialogoCueva.SetActive(true);
+            DialogoPensamiento.text = "Debes de buscar la ultima planta";
+            DialogoPensamiento2.text = "";
+            CuadroObjetivo.SetActive(false);
+        }
+        if(contadorPlantasN == 1)
+        {
+            DialogoCueva.SetActive(true);
+            DialogoPensamiento.text = "presiona F para salir";
+            DialogoPensamiento2.text = "";
+            CuadroObjetivo.SetActive(false);
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                SceneManager.LoadScene(7);
+            }
+        }
+        
 
-        //SceneManager.LoadScene(7);
+        
     }
 
     public void noSalida2()
