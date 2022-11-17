@@ -26,6 +26,27 @@ public class ConversacionAldeano : MonoBehaviour
     public GameObject aldeanoCasaAlcalde;
     public GameObject Alcalde;
 
+    public GameObject activarAlcalde;
+    public GameObject activarAlcalde1;
+    public GameObject activarAlcalde2;
+    public GameObject activarAlcalde3;
+    public GameObject CamaraAdeanoAlcalde;
+    public GameObject CamaraCasaAlcalde;
+
+    public GameObject dialogoAlcalde;
+    public GameObject dialogoAlcalde1;
+    public GameObject dialogoAlcalde2;
+    public GameObject dialogoAlcalde3;
+    public GameObject dialogoAlcalde4;
+    public GameObject CamaraAlcalde;
+
+    public GameObject EntradaBosque;
+    public GameObject DesactivarAldeano2;
+    public GameObject CamaraBosque;
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -154,7 +175,7 @@ public class ConversacionAldeano : MonoBehaviour
     {
         DesactivarAldeano.SetActive(false);
     }
-    public void ActivarAlcalde()
+    public void ActivarAlcaldeA()
     {
         activarAldeano2.SetActive(true);
         Alcalde.SetActive(true);
@@ -162,6 +183,79 @@ public class ConversacionAldeano : MonoBehaviour
     public void DesactivarAlcalde()
     {
         aldeanoCasaAlcalde.SetActive(false);
+    }
+
+    public void ActivarmisionAlcalde()
+    {
+        dialogosUI.text = "Beltran, como te fue?";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(activarAlcalde);
+            activarAlcalde1.SetActive(true);
+            CuadroD.SetActive(false);
+            CamaraAdeanoAlcalde.SetActive(true);
+            CamaraProta.SetActive(false);
+        }
+    }
+    public void ActivarmisionAlcalde1()
+    {
+        dialogosUI.text = "Creo que las bebidas seran para otro momento";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(activarAlcalde1);
+            activarAlcalde2.SetActive(true);
+            CuadroD.SetActive(false);
+            CamaraAdeanoAlcalde.SetActive(false);
+            CamaraProta.SetActive(false);
+            CamaraCasaAlcalde.SetActive(true);
+        }
+    }
+    public void ActivarmisionAlcalde2()
+    {
+        dialogosUI.text = "ha ocurrido un problema, el alcalde te necesita... Dirigete hacia su casa";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(activarAlcalde2);
+            activarAlcalde3.SetActive(true);
+            CuadroD.SetActive(false);
+            CamaraAdeanoAlcalde.SetActive(true);
+            CamaraProta.SetActive(false);
+            CamaraCasaAlcalde.SetActive(false);
+        }
+    }
+    public void ActivarmisionAlcalde3()
+    {
+        dialogosUI.text = "Es algo serio debes de dirigirte lo antes posible, despues nos veremos";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(activarAlcalde3);
+            CuadroD.SetActive(false);
+            CamaraAdeanoAlcalde.SetActive(false);
+            CamaraProta.SetActive(true);
+            CamaraCasaAlcalde.SetActive(false);
+            DesactivarAldeano2.SetActive(true);
+        }
+    }
+    public void AldeanoAlcaldeDesactivar()
+    {
+        activarAldeano2.SetActive(false);
+    }
+    public void DesactivarIrAlcalde()
+    {
+        DesactivarAldeano2.SetActive(false);
+
     }
 }
 
