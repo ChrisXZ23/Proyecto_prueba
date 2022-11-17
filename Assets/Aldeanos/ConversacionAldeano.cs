@@ -43,7 +43,8 @@ public class ConversacionAldeano : MonoBehaviour
     public GameObject EntradaBosque;
     public GameObject DesactivarAldeano2;
     public GameObject CamaraBosque;
-
+    public GameObject BarreraBosque;
+    public GameObject BarreraBosqueAbierta;
 
 
 
@@ -257,5 +258,88 @@ public class ConversacionAldeano : MonoBehaviour
         DesactivarAldeano2.SetActive(false);
 
     }
+
+    public void ActivarDialogoAlcalde()
+    {
+        dialogosUI.text = "Beltran, Es bueno verte por acá viejo amigo, ha ocurrido una emergencia";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(dialogoAlcalde);
+            dialogoAlcalde1.SetActive(true);
+            CuadroD.SetActive(false);
+            CamaraAlcalde.SetActive(true);
+            CamaraProta.SetActive(false);
+        }
+    }
+    public void ActivarDialogoAlcalde1()
+    {
+        dialogosUI.text = "El pequeño timmy ha caido en una grave enfermedad... tranquilo es curable el problema es que no cuento con los materiales necesarios";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(dialogoAlcalde1);
+            dialogoAlcalde2.SetActive(true);
+            CuadroD.SetActive(false);
+            CamaraAlcalde.SetActive(false);
+            CamaraProta.SetActive(false);
+            CamaraBosque.SetActive(true);
+        }
+    }
+    public void ActivarDialogoAlcalde2()
+    {
+        dialogosUI.text = "Por favor dirigete hacia la zona del bosque, ingresa por la entrada que esta cerca de tu casa y recolecta la planta medicinal que necesitamos para el antidoto";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(dialogoAlcalde2);
+            dialogoAlcalde3.SetActive(true);
+            CuadroD.SetActive(false);
+            CamaraAlcalde.SetActive(true);
+            CamaraProta.SetActive(false);
+            CamaraBosque.SetActive(false);
+        }
+    }
+    public void ActivarDialogoAlcalde3()
+    {
+        dialogosUI.text = "Es una tarea que solo puedo encargarte a ti, ve con mucho cuidado y buena suerte";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(dialogoAlcalde3);
+            dialogoAlcalde4.SetActive(true);
+            CuadroD.SetActive(false);
+            CamaraAlcalde.SetActive(true);
+            CamaraProta.SetActive(false);
+            CamaraBosque.SetActive(false);
+        }
+    }
+    public void ActivarDialogoAlcalde4()
+    {
+        dialogosUI.text = "Por cierto, ultimamente he sentido una presencia muy extraña en el bosque la cual, ha mantenido de mal humor al oso pardo, ten mucho cuidado si lo encuentras... no cometas alguna locura";
+        dialogosintUI.text = "presiona F para continuar";
+        CuadroD.SetActive(true);
+
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            Destroy(dialogoAlcalde4);
+            CuadroD.SetActive(false);
+            CamaraAlcalde.SetActive(false);
+            CamaraProta.SetActive(true);
+            CamaraBosque.SetActive(false);
+            BarreraBosque.SetActive(false);
+            BarreraBosqueAbierta.SetActive(true);
+            EntradaBosque.SetActive(true);
+        }
+    }
+    
 }
 
