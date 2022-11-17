@@ -29,6 +29,7 @@ public class Recoleccion : MonoBehaviour
     public Text PensamientosBotones;
     public Text Objetivos;
     public GameObject Cuadropensamiento;
+    public GameObject imagenPlanta;
     
     public GameObject cuadroObjetivo;
     public GameObject cuboB;
@@ -54,6 +55,7 @@ public class Recoleccion : MonoBehaviour
         cuadroObjetivo.SetActive(true);
         Objetivos.text = "Busca las plantas medicinales";
         PlantasNumeros.SetActive(true);
+        imagenPlanta.SetActive(true);
     }
     public void BmensajeBienvenida()
     {
@@ -130,6 +132,7 @@ public class Recoleccion : MonoBehaviour
         CameraCueva.SetActive(true);
         Cuadropensamiento.SetActive(true);
         cuadroObjetivo.SetActive(false);
+        imagenPlanta.SetActive(false);
         Pensamientos.text = "*Cuatro plantas no alcanzaran para los enfermos, deberia de buscar una más*";
         PensamientosBotones.text = "Presiona L para continuar";
         
@@ -138,6 +141,7 @@ public class Recoleccion : MonoBehaviour
         {
             Cuadropensamiento.SetActive(false);
             cuadroObjetivo.SetActive(true);
+            imagenPlanta.SetActive(true);
 
 
             Destroy(CuboP);
@@ -210,7 +214,7 @@ public class Recoleccion : MonoBehaviour
         if (NumeroHierbas <= 3)
         {
             Cuadropensamiento.SetActive(true);
-            Pensamientos.text = ("*Deberia buscar primero en el bosque antes de entrar*");
+            Pensamientos.text = ("*Debería buscar primero en el bosque antes de entrar*");
             PensamientosBotones.text = "";
         }
 
