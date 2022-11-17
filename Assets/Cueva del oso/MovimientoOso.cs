@@ -19,6 +19,10 @@ public class MovimientoOso : MonoBehaviour
     public GameObject ataque1;
     public GameObject ataque2;
     public GameObject GameOver;
+    public GameObject particulagolpe1;
+    public GameObject particulagolpe2;
+    public Text mensajegolpe;
+
 
     public GameObject fondoHP;
     public Image hpEnemy;
@@ -98,7 +102,7 @@ public class MovimientoOso : MonoBehaviour
             animacion.SetBool("ataque", false);
             GameOver.SetActive(false);
             audioOsocerca.SetActive(false);
-            audiocorriendoOso.SetActive(true);
+
 
         }
 
@@ -108,6 +112,7 @@ public class MovimientoOso : MonoBehaviour
     public void vidaOso1()
     {
         hpEnemy.fillAmount = vidaEnemy / 100;
+        mensajegolpe.text = "Golpea con click izquierdo";
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -118,12 +123,18 @@ public class MovimientoOso : MonoBehaviour
             vidaosoMenos();
             audioheridoOso.SetActive(true);
             audioheridoOso2.SetActive(false);
+
+            particulagolpe1.SetActive(true);
+            particulagolpe2.SetActive(false);
+
+
         }
     }
 
     public void vidaOso2()
     {
         hpEnemy.fillAmount = vidaEnemy / 100;
+        mensajegolpe.text = "Golpea con click izquierdo";
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -134,6 +145,9 @@ public class MovimientoOso : MonoBehaviour
             vidaosoMenos();
             audioheridoOso2.SetActive(true);
             audioheridoOso.SetActive(false);
+
+            particulagolpe2.SetActive(true);
+            particulagolpe1.SetActive(false);
         }
     }
 
@@ -166,6 +180,7 @@ public class MovimientoOso : MonoBehaviour
             audioOsocerca.SetActive(false);
             audioheridoOso.SetActive(true);
             audioheridoOso2.SetActive(true);
+            mensajegolpe.text = "Sal de la cueva";
         }
     }
 
