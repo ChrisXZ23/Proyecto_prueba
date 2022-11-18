@@ -5,20 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class cambioEscenaBosque : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Animator TranscionAnim;
+
     void Start()
     {
-
+        TranscionAnim = GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadScene(string scene)
     {
-
+        StartCoroutine(Transiciona(scene));
     }
 
-    private void OnTriggerEnter(Collider other)
-    {   
-            SceneManager.LoadScene(3);    
+
+    IEnumerator Transiciona(string scene)
+    {
+        TranscionAnim.SetTrigger("salida");
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(3);
     }
 }
