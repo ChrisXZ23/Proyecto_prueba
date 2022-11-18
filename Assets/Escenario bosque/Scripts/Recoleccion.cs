@@ -44,8 +44,7 @@ public class Recoleccion : MonoBehaviour
     public GameObject CameraCueva;
     //public Transform TransformPlayer;
     public GameObject enemigo;
-
-
+    public GameObject ParaTransicion;
 
 
     public void MensajeBienvenida()
@@ -204,13 +203,9 @@ public class Recoleccion : MonoBehaviour
             Cuadropensamiento.SetActive(true);
             Pensamientos.text = "Presiona F para entrar";
             PensamientosBotones.text = "";
-
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                SceneManager.LoadScene(6);
-            }
-
+            ParaTransicion.SetActive(true);
         }
+
         if (NumeroHierbas <= 3)
         {
             Cuadropensamiento.SetActive(true);
@@ -220,6 +215,7 @@ public class Recoleccion : MonoBehaviour
 
 
     }
+
 
     public void cuevaSalida()
     {

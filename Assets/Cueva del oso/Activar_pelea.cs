@@ -29,7 +29,7 @@ public class Activar_pelea : MonoBehaviour
     public GameObject CuadroObjetivo;
     public Text Objetivos;
     public Transform pointPlayer;
-
+    public GameObject Salida;
 
 
     void Start()
@@ -142,10 +142,7 @@ public class Activar_pelea : MonoBehaviour
             DialogoPensamiento.text = "presiona F para salir";
             DialogoPensamiento2.text = "";
             CuadroObjetivo.SetActive(false);
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                SceneManager.LoadScene(7);
-            }
+            Salida.SetActive(true);
         }
         
 
