@@ -18,6 +18,7 @@ public class Activar_pelea : MonoBehaviour
     public GameObject contadorPlantas;
     public Text contadorPlantasT;
     public int contadorPlantasN;
+    public GameObject imagenPlanta;
     public GameObject plantaF;
     public GameObject RecoF;
     public GameObject RecoF2;
@@ -47,6 +48,7 @@ public class Activar_pelea : MonoBehaviour
         CuadroObjetivo.SetActive(true);
         Mcueva.SetActive(true);
         contadorPlantas.SetActive(true);
+        imagenPlanta.SetActive(true);
         contadorPlantasT.text = "4 / 5";
         Objetivos.text = "Busca la planta restante";
     }
@@ -78,6 +80,7 @@ public class Activar_pelea : MonoBehaviour
             contadorPlantasN += 1;
             contadorPlantasT.text = "5 / 5";
             contadorPlantas.SetActive(false);
+            imagenPlanta.SetActive(false);
         }
     }
 
@@ -103,6 +106,7 @@ public class Activar_pelea : MonoBehaviour
             Destroy(RecoF2);
 
             contadorPlantas.SetActive(true);
+            imagenPlanta.SetActive(true);
         }
 
 
