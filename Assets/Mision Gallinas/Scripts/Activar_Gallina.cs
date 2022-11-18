@@ -63,6 +63,7 @@ public class Activar_Gallina : MonoBehaviour
     public GameObject audioGallinas;
     public GameObject audioCompletado;
     public GameObject CuboMarco;
+    public GameObject audioAldea;
 
     [SerializeField] private int conteoG;
     public GameObject contadorG;
@@ -758,6 +759,7 @@ public class Activar_Gallina : MonoBehaviour
         Destroy(audioD2);
         textoCompletado.SetActive(true);
         CuboMarco.SetActive(true);
+        audioAldea.SetActive(true);
     }
 
 }
