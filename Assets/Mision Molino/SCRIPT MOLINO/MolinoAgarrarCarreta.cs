@@ -7,6 +7,7 @@ public class MolinoAgarrarCarreta : MonoBehaviour
     public GameObject Corn;
     public Transform Interaction;
     public GameObject Contador;
+    public GameObject player;
 
     private bool activo;
 
@@ -20,8 +21,9 @@ public class MolinoAgarrarCarreta : MonoBehaviour
                 Corn.transform.SetParent(Interaction);
                 Corn.transform.position = Interaction.position;
                 Corn.GetComponent<Rigidbody>().isKinematic = true;
-                //var anim = Corn.GetComponent<Animator>();
-                //anim.SetBool("carre", true);
+                var anim = player.GetComponent<Animator>();
+                anim.SetBool("carreta", true);
+                anim.SetBool("IsWalking", false);
                 Contador.SetActive(false);
             }
 
@@ -33,6 +35,9 @@ public class MolinoAgarrarCarreta : MonoBehaviour
             Corn.GetComponent<Rigidbody>().isKinematic = false;
             //var anim = Corn.GetComponent<Animator>();
             //anim.SetBool("carre", false);
+            var anim = player.GetComponent<Animator>();
+            anim.SetBool("carreta", false);
+            anim.SetBool("IsWalking", true);
         }
     }
 

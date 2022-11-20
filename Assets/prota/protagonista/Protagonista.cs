@@ -176,7 +176,13 @@ public class Protagonista : MovimientoProta
 
     }
 
-
-
+    public void llevarcarreta()
+    {
+        animator.SetBool("carreta", false);
+    }
+    public void llevarMaiz()
+    {
+        animator.SetBool("agarrar", false);
+    }
 
 }
