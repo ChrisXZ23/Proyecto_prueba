@@ -18,6 +18,17 @@ public class MolinoActivar : MonoBehaviour
     public GameObject Maices;
     public GameObject Camaraplayer;
     public GameObject CamaraMolino;
+
+    public Text mensajeMision;
+    public GameObject CuadroTexto;
+    public GameObject somidoMaiz;
+
+    public GameObject carreta;
+    public GameObject imagencompletaMision;
+    public GameObject salirmensajeMo;
+
+    private bool activo;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -74,10 +85,56 @@ public class MolinoActivar : MonoBehaviour
             Destroy(CONMAIZ);
             Destroy(ActivarDialogos);
             Destroy(finMision);
+            imagencompletaMision.SetActive(true);
+            salirmensajeMo.SetActive(true);
         }
+    }
+
+    public void completarMolinoMisionX()
+    {
+        salirmensajeMo.SetActive(false);
+        imagencompletaMision.SetActive(false);
     }
     public void salirMensaje()
     {
         CuadroD.SetActive(false);
+    }
+
+    public void agarrarObjestos()
+    {
+        CuadroTexto.SetActive(true);
+        mensajeMision.text = "presiona F para sostener el objeto, presiona E para soltarlo";
+        
+    }
+    public void agarrarObjestoMAIZ()
+    {
+        CuadroTexto.SetActive(true);
+        mensajeMision.text = "presiona F para sostener el objeto, Llevalo a la carreta y sobre el marcador presiona E para soltarlo";
+        //somidoMaiz.SetActive(true);
+
+    }
+    public void SoltarObjestos()
+    {
+        CuadroTexto.SetActive(false);
+        mensajeMision.text = " ";
+        //somidoMaiz.SetActive(false);
+    }
+    public void sonidoMaiz()
+    {
+        somidoMaiz.SetActive(true);
+    }
+
+    public void girrarCarreta()
+    {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            var anim = carreta.GetComponent<Animator>();
+            anim.SetBool("carretagirar", true);
+        }
+        if (Input.GetKeyUp(KeyCode.W))
+        {
+            var anim = carreta.GetComponent<Animator>();
+            anim.SetBool("carretagirar", false);
+        }
     }
 }

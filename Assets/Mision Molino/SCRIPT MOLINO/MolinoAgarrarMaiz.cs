@@ -7,6 +7,8 @@ public class MolinoAgarrarMaiz : MonoBehaviour
     public GameObject Corn;
     public Transform Interaction;
     public GameObject Contador;
+    public GameObject sonidoMaiz;
+    public GameObject player;
 
     private bool activo;
 
@@ -20,8 +22,10 @@ public class MolinoAgarrarMaiz : MonoBehaviour
                 Corn.transform.position = Interaction.position;
                 Corn.GetComponent<Rigidbody>().isKinematic = true;
                 Contador.SetActive(true);
-
-
+                sonidoMaiz.SetActive(true);
+                var anim = player.GetComponent<Animator>();
+                anim.SetBool("agarrar", true);
+                anim.SetBool("IsWalking", false);
             }
 
         }
@@ -31,6 +35,10 @@ public class MolinoAgarrarMaiz : MonoBehaviour
             Corn.transform.SetParent(null);
             Corn.GetComponent<Rigidbody>().isKinematic = false;
             //Contador.SetActive(false);
+            sonidoMaiz.SetActive(false);
+            var anim = player.GetComponent<Animator>();
+            anim.SetBool("agarrar", false);
+            anim.SetBool("IsWalking", true);
 
         }
     }

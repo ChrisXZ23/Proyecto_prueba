@@ -13,6 +13,7 @@ public class MolinoContador : MonoBehaviour
     public Text dialogosUI;
     public Text dialogosintUI;
     public GameObject CuadroD;
+    //public GameObject sonidoMaiz;
     //public GameObject completar;
 
 
@@ -35,6 +36,7 @@ public class MolinoContador : MonoBehaviour
             MAIZ++;
             textoItems.text = MAIZ.ToString() + " de " + MaxItems.ToString();
             Destroy(other.transform.gameObject);
+
         }
         if (MAIZ == MaxItems)
         {
@@ -42,6 +44,7 @@ public class MolinoContador : MonoBehaviour
             FinMisionMaiz.SetActive(true);
 
         }
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -55,7 +58,7 @@ public class MolinoContador : MonoBehaviour
     public void misionCompletada()
     {
         //Debug.Log("El viento soplo muy fuerte y tiro todos las mazorcas al suelo, se encuentran regados en toda la area de los cultivos -presiona F para continuar");
-        dialogosUI.text = "Regresa con el granjero";
+        dialogosUI.text = "Regresa con el granjero... deja la carreta en su sitio";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
         if (Input.GetKeyUp(KeyCode.F))
