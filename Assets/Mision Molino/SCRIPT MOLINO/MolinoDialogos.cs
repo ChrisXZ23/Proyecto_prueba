@@ -29,7 +29,7 @@ public class MolinoDialogos : MonoBehaviour
     public void mensajemolino1()
     {
         //Debug.Log("El viento soplo muy fuerte y tiro todos las mazorcas al suelo, se encuentran regados en toda la area de los cultivos -presiona F para continuar");
-        dialogosUI.text = "El viento soplo muy fuerte y tiro todos las mazorcas al suelo, se encuentran regados en toda la area de los cultivos";
+        dialogosUI.text = "Tuvimos una buena cosecha este año. Hay cultivos más grandes de lo común y mi frágil espalda no me deja recogerlos.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
         if (Input.GetKeyUp(KeyCode.F))
@@ -46,7 +46,7 @@ public class MolinoDialogos : MonoBehaviour
     public void mensajemolino2()
     {
         //Debug.Log("¿podrias ayudarme a colocarlor dentro de la carreta y traerlos acá?  -presiona F para continuar");
-        dialogosUI.text = "¿podrias ayudarme a colocarlor dentro de la carreta y traerlos acá?";
+        dialogosUI.text = "¿Podrías ayudarme a colocarlos dentro de la carreta y traerlos acá?";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -64,7 +64,7 @@ public class MolinoDialogos : MonoBehaviour
     public void mensajemolino3()
     {
         //Debug.Log("acercate al objeto y presiona F para sostener el objeto, presiona E para soltarlo  -presiona F para continuar");
-        dialogosUI.text = "acercate al objeto y presiona F para sostener el objeto, presiona E para soltarlo";
+        dialogosUI.text = "Recuerda que debes de acercarte al objeto y presiona F para sostener el objeto, presiona E para soltarlo.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
