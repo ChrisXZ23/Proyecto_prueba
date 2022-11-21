@@ -44,7 +44,7 @@ public class MolinoActivar : MonoBehaviour
     public void MensajeDeActivasion()
     {
         //Debug.Log("Hey, Beltran ayudame por favor -presiona F para continuar");
-        dialogosUI.text = "Hey, Beltran ayudame por favor";
+        dialogosUI.text = "¡Hey, Beltran ayudame por favor!";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -103,13 +103,13 @@ public class MolinoActivar : MonoBehaviour
     public void agarrarObjestos()
     {
         CuadroTexto.SetActive(true);
-        mensajeMision.text = "presiona F para sostener el objeto, presiona E para soltarlo";
+        mensajeMision.text = "Presiona F para sostener el objeto, presiona E para soltarlo.";
         
     }
     public void agarrarObjestoMAIZ()
     {
         CuadroTexto.SetActive(true);
-        mensajeMision.text = "presiona F para sostener el objeto, Llevalo a la carreta y sobre el marcador presiona E para soltarlo";
+        mensajeMision.text = "Presiona F para sostener el objeto, Llevalo a la carreta y sobre el marcador presiona E para soltarlo.";
         //somidoMaiz.SetActive(true);
 
     }

@@ -62,22 +62,26 @@ public class ConversacionAldeano : MonoBehaviour
 
     public void mensajeAldeano1()
     {
-        dialogosUI.text = "Hola Bertran, como has estado";
+        dialogosUI.text = "Hola, Beltrán, ¿cómo has estado?";
+        dialogosintUI.text = " ";
         CuadroD.SetActive(true);
     }
     public void mensajeAldeano2()
     {
-        dialogosUI.text = "Hola Bertran, lindo dia";
+        dialogosUI.text = "Hola, Beltrán, lindo día...";
+        dialogosintUI.text = " ";
         CuadroD.SetActive(true);
     }
     public void mensajeAldeano3()
     {
-        dialogosUI.text = "Hey Bertran, este dia ha estado un poco extraño";
+        dialogosUI.text = "Hey Beltrán, este día ha estado un poco extraño.";
+        dialogosintUI.text = " ";
         CuadroD.SetActive(true);
     }
     public void mensajeAldeano4()
     {
-        dialogosUI.text = "Hey Bertran, no presientes que algo ocurrira";
+        dialogosUI.text = "Hey Beltrán, no presientes que algo ocurrirá.";
+        dialogosintUI.text = " ";
         CuadroD.SetActive(true);
     }
     public void salirMensajeAldeano()
@@ -87,7 +91,7 @@ public class ConversacionAldeano : MonoBehaviour
 
     public void ActivarmisionesAldea()
     {
-        dialogosUI.text = "Beltran, te he estado buscando, nos esperan muchas tareas para el dia de hoy";
+        dialogosUI.text = "Beltrán, te he estado buscando, nos esperan muchas tareas para el día de hoy.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -103,7 +107,7 @@ public class ConversacionAldeano : MonoBehaviour
 
     public void ActivarmisionesAldea1()
     {
-        dialogosUI.text = "Ahora que tengo toda tu atencion lo siguiente que debemos de hacer es...";
+        dialogosUI.text = "Ok...Ahora que tengo toda tu atención lo siguiente que debemos de hacer es...";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -119,7 +123,7 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarmisionesAldea2()
     {
-        dialogosUI.text = "debes de ir con la señora, habla con ella y ayudala a recolectar la cosecha de este año";
+        dialogosUI.text = "Debes de ir con la señora Rohan, ayudala a recolectar la cosecha de este año. Mencionó algo de cultivos gigantes...";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -136,7 +140,7 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarmisionesAldea3()
     {
-        dialogosUI.text = "despues dirigete a la granja, debemos de ayudar al señor sus gallinas, se volvieron a escapar";
+        dialogosUI.text = "Después dirígete a la granja, debemos de ayudar al señor Talón con sus gallinas, ¡¡se volvieron a escapar!!";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -153,7 +157,7 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarmisionesAldea4()
     {
-        dialogosUI.text = "por el momento realiza esas tareas y cuando termines buscame frente a la fuente para ir por algo de beber";
+        dialogosUI.text = "Por el momento realiza estas tareas. Cuando termines buscame en la plaza, estaré cerca de la fuente para ir por algo de beber.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -188,7 +192,7 @@ public class ConversacionAldeano : MonoBehaviour
 
     public void ActivarmisionAlcalde()
     {
-        dialogosUI.text = "Beltran, como te fue?";
+        dialogosUI.text = "Beltrán, ¿cómo te fue?";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -203,7 +207,7 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarmisionAlcalde1()
     {
-        dialogosUI.text = "Creo que las bebidas seran para otro momento";
+        dialogosUI.text = "Creo que las bebidas serán para otro momento.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -219,7 +223,7 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarmisionAlcalde2()
     {
-        dialogosUI.text = "ha ocurrido un problema, el alcalde te necesita... Dirigete hacia su casa";
+        dialogosUI.text = "Ha ocurrido un problema, el alcalde te necesita... Dirígete hacia su casa";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -235,7 +239,7 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarmisionAlcalde3()
     {
-        dialogosUI.text = "Es algo serio debes de dirigirte lo antes posible, despues nos veremos";
+        dialogosUI.text = "Es algo serio debes de dirigirte lo antes posible, después nos veremos amigo.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -261,7 +265,7 @@ public class ConversacionAldeano : MonoBehaviour
 
     public void ActivarDialogoAlcalde()
     {
-        dialogosUI.text = "Beltran, Es bueno verte por acá viejo amigo, ha ocurrido una emergencia";
+        dialogosUI.text = "Beltrán, Es bueno verte por acá viejo amigo, ha ocurrido una emergencia.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
 
@@ -276,8 +280,8 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarDialogoAlcalde1()
     {
-        dialogosUI.text = "El pequeño timmy ha caido en una grave enfermedad... tranquilo es curable el problema es que no cuento con los materiales necesarios";
-        dialogosintUI.text = "presiona F para continuar";
+        dialogosUI.text = "El pequeño Jimmy ha caído en una grave enfermedad... tranquilo es curable el problema es que no cuento con los materiales necesarios.";
+        dialogosintUI.text = "presiona F";
         CuadroD.SetActive(true);
 
         if (Input.GetKeyUp(KeyCode.F))
@@ -292,8 +296,8 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarDialogoAlcalde2()
     {
-        dialogosUI.text = "Por favor dirigete hacia la zona del bosque, ingresa por la entrada que esta cerca de tu casa y recolecta la planta medicinal que necesitamos para el antidoto";
-        dialogosintUI.text = "presiona F para continuar";
+        dialogosUI.text = "Por favor dirígete hacia la zona del bosque, ingresa por la entrada que está cerca de tu casa y recolecta la planta medicinal que necesitamos para el antídoto.";
+        dialogosintUI.text = "presiona F";
         CuadroD.SetActive(true);
 
         if (Input.GetKeyUp(KeyCode.F))
@@ -308,8 +312,8 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarDialogoAlcalde3()
     {
-        dialogosUI.text = "Es una tarea que solo puedo encargarte a ti, ve con mucho cuidado y buena suerte";
-        dialogosintUI.text = "presiona F para continuar";
+        dialogosUI.text = "Es una tarea que solo puedo encargarte a ti, ve con mucho cuidado y buena suerte. Por cierto...";
+        dialogosintUI.text = "presiona F";
         CuadroD.SetActive(true);
 
         if (Input.GetKeyUp(KeyCode.F))
@@ -324,8 +328,8 @@ public class ConversacionAldeano : MonoBehaviour
     }
     public void ActivarDialogoAlcalde4()
     {
-        dialogosUI.text = "Por cierto, ultimamente he sentido una presencia muy extraña en el bosque la cual, ha mantenido de mal humor al oso pardo, ten mucho cuidado si lo encuentras... no cometas alguna locura";
-        dialogosintUI.text = "presiona F para continuar";
+        dialogosUI.text = "Últimamente he sentido una presencia muy extraña en el bosque la cual, ha mantenido de mal humor al oso, ten mucho cuidado si lo encuentras.";
+        dialogosintUI.text = "presiona F";
         CuadroD.SetActive(true);
 
         if (Input.GetKeyUp(KeyCode.F))
