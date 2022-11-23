@@ -116,11 +116,7 @@ public class Recoleccion : MonoBehaviour
             ConteoDePlantas.text = "4 / 4";
             CuboP.SetActive(true);
             PlantasNumeros.SetActive(false);
-            
-
             CuboP.transform.position = pointSpawn.position;
-            
-
 
         }
     }

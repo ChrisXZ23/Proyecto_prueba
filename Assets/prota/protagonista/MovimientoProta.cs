@@ -34,10 +34,7 @@ public class MovimientoProta : MonoBehaviour
     {
         transform.Translate(Input.GetAxis("Horizontal") * velocidad, 0, Input.GetAxis("Vertical") * velocidad);
         transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
-        //noMovimiento();
-        
-
-        
+        //noMovimiento();  
 
     }
 
@@ -50,9 +47,6 @@ public class MovimientoProta : MonoBehaviour
                 transform.Translate(Input.GetAxis("Horizontal") * velocidad * 2, 0, Input.GetAxis("Vertical") * velocidad * 2);
             }
         }
-
-        
-
     }
 
     public void VelocidadmenosT()
@@ -84,7 +78,7 @@ public class MovimientoProta : MonoBehaviour
         if (velocidad == 0)
         {
             //Debug.Log("Hay movimiento");
-            velocidad = 0.025f;
+            velocidad = 0.03f;
 
             transform.Rotate(0, Input.GetAxis("Mouse X"), 0);
         }
