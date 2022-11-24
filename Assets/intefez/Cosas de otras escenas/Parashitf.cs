@@ -6,6 +6,6 @@ public class Parashitf : mensajes
 {
     void Start()
     {
-         Invoke("ResetearTexto", 2f);
+         Invoke("ResetearTexto", 5f);
     }
 }
