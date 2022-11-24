@@ -77,15 +77,15 @@ public class MovimientoOso : MonoBehaviour
         }
       
 
-        if (dist <= 7)
+        if (dist >= 7)
         {
-
+            SeguirMesh();
             animacion.SetBool("walk", true);
             audiocorriendoOso.SetActive(false);
         }
 
 
-        if (dist <= 5)
+        if (dist <= 4)
         {
 
             animacion.SetBool("ataque", true);
@@ -96,9 +96,9 @@ public class MovimientoOso : MonoBehaviour
 
 
         }
-        if (dist >= 6)
+        if (dist >= 5)
         {
-
+            SeguirMesh();
             animacion.SetBool("ataque", false);
             GameOver.SetActive(false);
             audioOsocerca.SetActive(false);

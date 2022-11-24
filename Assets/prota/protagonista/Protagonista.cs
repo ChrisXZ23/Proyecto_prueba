@@ -50,6 +50,7 @@ public class Protagonista : MovimientoProta
         if (!isRunning && (walkPressed && RunPressed))
         {
             animator.SetBool(isrunningHash, true);
+            animator.SetBool("help", false);
         }
         
 
@@ -63,6 +64,7 @@ public class Protagonista : MovimientoProta
         {
             StaminaV();
             velocidadRS();
+            animator.SetBool("help", false);
         }
 
         if (!RunPressed && !walkPressed)
@@ -134,23 +136,46 @@ public class Protagonista : MovimientoProta
         hpPlayer.fillAmount = vidaP / 100;
 
         vidaP -= 8;
-        animator.SetBool("help", true);
+        
  
+        if(vidaP >= 16)
+        {
+            animator.SetBool("help", true);
+        }
+        
+
+        if(vidaP <= 15)
+        {
+            animator.SetBool("deathP", true);
+            quietoOver.transform.position = PointP.transform.position;
+            animator.SetBool("help", false);
+
+        }
+        
+
+    }
+
+    public void bajarvidaC()
+    {
+        hpPlayer.fillAmount = vidaP / 100;
+        vidaP -= 0.05f;
 
         if (vidaP <= 0)
         {
             vidaP = 0;
             SceneManager.LoadScene(6);
         }
+    }
 
-        if(vidaP <= 0)
+    public void bajarvidaA()
+    {
+        hpPlayer.fillAmount = vidaP / 100;
+        vidaP -= 1;
+        if (vidaP <= 0)
         {
-            animator.SetBool("deathP", true);
-            quietoOver.transform.position = PointP.transform.position;
-
+            vidaP = 0;
+            SceneManager.LoadScene(6);
         }
-        
-
     }
 
     public void golpeP()
