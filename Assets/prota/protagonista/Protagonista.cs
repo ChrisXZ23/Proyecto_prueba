@@ -111,9 +111,6 @@ public class Protagonista : MovimientoProta
             vStamina = 0;
             
         }
-        
-
-
 
     }
 
@@ -146,10 +143,11 @@ public class Protagonista : MovimientoProta
             SceneManager.LoadScene(6);
         }
 
-        if(vidaP <= 10)
+        if(vidaP <= 0)
         {
             animator.SetBool("deathP", true);
             quietoOver.transform.position = PointP.transform.position;
+
         }
         
 
