@@ -58,7 +58,7 @@ public class MolinoContador : MonoBehaviour
     public void misionCompletada()
     {
         //Debug.Log("El viento soplo muy fuerte y tiro todos las mazorcas al suelo, se encuentran regados en toda la area de los cultivos -presiona F para continuar");
-        dialogosUI.text = "Regresa con el granjero... deja la carreta en su sitio";
+        dialogosUI.text = "Regresa con el granjero... No olvides deja la carreta en su sitio.";
         dialogosintUI.text = "presiona F para continuar";
         CuadroD.SetActive(true);
         if (Input.GetKeyUp(KeyCode.F))
