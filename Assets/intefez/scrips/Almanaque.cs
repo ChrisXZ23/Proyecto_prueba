@@ -42,6 +42,8 @@ public class Almanaque : mensajes
     public void RegresoJuego()
     {
         TodoAlmanaque.SetActive(false);
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     void Update()
@@ -50,6 +52,8 @@ public class Almanaque : mensajes
         {
             TodoAlmanaque.SetActive(true);
             CuboAplicar.SetActive(true);
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 }
