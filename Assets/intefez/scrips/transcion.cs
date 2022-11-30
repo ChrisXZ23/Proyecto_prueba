@@ -15,6 +15,9 @@ public class transcion : MonoBehaviour
     public void LoadScene(string scene)
     {
         StartCoroutine(Transiciona(scene));
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 

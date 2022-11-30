@@ -34,6 +34,9 @@ public class Botones : MonoBehaviour
     {
         PanelPausa.SetActive(false);
         Time.timeScale = 1;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void Regreso()
